@@ -1,5 +1,4 @@
 import React, { CSSProperties } from "react";
-import { flex } from "../css";
 import ReactFullpage from "@fullpage/react-fullpage";
 import PageElement from "./PageElements";
 
@@ -17,7 +16,7 @@ export default function FullPage(props: any, state: any) {
       licenseKey={"YOUR_KEY_HERE"}
       scrollingSpeed={1000} /* Options here */
       render={({ state, fullpageApi }: any) => {
-        return <PageElement name="Lisa" />;
+        return <PageElement />;
       }}
     />
   );

@@ -22,6 +22,7 @@ function App() {
       <ReactFullpage
       //fullpage options
       navigation
+      navigationTooltips={['xv production ', 'what we do']}
       onLeave={handleSectionChange}
       licenseKey={"YOUR_KEY_HERE"}
       scrollingSpeed={1000} /* Options here */

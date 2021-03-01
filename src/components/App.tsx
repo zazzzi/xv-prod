@@ -4,6 +4,7 @@ import LogoSmall from "./LogoSmall";
 import NavList from "./NavList";
 import PageElement from "./PageElements";
 
+import "../overrides.css";
 
 function App() {
   function handleSectionChange(origin: any, destination: any, direction: any) {

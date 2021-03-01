@@ -1,7 +1,6 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import LogoSmall from "./LogoSmall";
-import NavList from "./NavList";
 import PageElement from "./PageElements";
 
 import "../overrides.css";
@@ -16,8 +15,6 @@ function App() {
     <React.Fragment>
       
       <LogoSmall />
-      <NavList />
-
 
       <ReactFullpage
       //fullpage options

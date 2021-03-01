@@ -6,7 +6,7 @@ import { flex } from "../css";
 export default function FirstCard() {
   return (
     <div className="section">
-      <div style={flexCenter}>
+      <div className="slide" style={flexCenter}>
         <p style={infoText}>
           <b>XV Production</b> is a creative studio that collaborates with
           fashion- and textile brands in a variety of projects.<br></br>
@@ -16,7 +16,15 @@ export default function FirstCard() {
           ability to meet our customers wherever they might be their process.
         </p>
       </div>
+      
+      <div className="slide"> Slide 2 </div>
+      <div className="slide"> Slide 3 </div>
+      <div className="slide"> Slide 4 </div>
     </div>
+    
+  
+
+
   );
 }
 

@@ -2,18 +2,20 @@ import React, { CSSProperties } from "react";
 import background from "../assets/landing-page.png";
 import logo from "../assets/xvproduction-logo.png";
 import { flex } from "../css";
+import { CSSTransition } from 'react-transition-group';
 
-export default function BackgroundImage() {
-  
-  
+export default function BackgroundImage() {  
   return (
     // tomma taggar är fragments skapar div
     <>
-    <img src={logo} draggable="false" style={logoStyle} alt="" />
+    <div className="animate__animated animate__fadeInUp">
+      <img src={logo} draggable="false" style={logoStyle} alt=""/>
+    </div>
+    
     <img src={background} draggable="false" style={backgroundStyle} alt="" />
     </>
     );
-};
+}
 
 const backgroundStyle: CSSProperties = {
   position: "fixed",
@@ -25,7 +27,7 @@ const backgroundStyle: CSSProperties = {
 };
 
 const logoStyle: CSSProperties = {
-  position: "fixed",
+  position: "absolute",
   top: "25%",
   left: "25%",
   // right: 0,

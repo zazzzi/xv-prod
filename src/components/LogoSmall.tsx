@@ -4,7 +4,9 @@ import logoSmall from "../assets/logo_small.png";
 
 export default function LogoSmall() {
     return (
-        <img src={logoSmall} alt="XV-Logo" style={logoStyle}/>
+        <a href="">
+            <img src={logoSmall} alt="XV-Logo" style={logoStyle}/>
+        </a>
     )
 }
 

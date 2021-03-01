@@ -7,7 +7,7 @@ export default function FirstCard() {
   return (
     <div className="section">
 
-      <div className="slide" style={flexCenter} style={{ ...flexCenter, ...infoText }}>
+      <div className="slide" style={{ ...flexCenter, ...infoText }}>
 
         <p>
 

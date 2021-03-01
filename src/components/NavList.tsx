@@ -2,6 +2,7 @@ import React, { CSSProperties } from "react";
 
 interface NavState {
   sectionIndex: number
+
 }
 
 class NavList extends React.Component<{}, NavState> {

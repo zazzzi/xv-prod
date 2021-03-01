@@ -20,6 +20,7 @@ function App() {
 
       <ReactFullpage
       //fullpage options
+      navigation
       onLeave={handleSectionChange}
       licenseKey={"YOUR_KEY_HERE"}
       scrollingSpeed={1000} /* Options here */

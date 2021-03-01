@@ -6,8 +6,11 @@ import { flex } from "../css";
 export default function FirstCard() {
   return (
     <div className="section">
-      <div className="slide" style={flexCenter}>
-        <p style={infoText}>
+
+      <div className="slide" style={flexCenter} style={{ ...flexCenter, ...infoText }}>
+
+        <p>
+
           <b>XV Production</b> is a creative studio that collaborates with
           fashion- and textile brands in a variety of projects.<br></br>
           <br></br> As a creative studio, we work with all phases of the
@@ -35,5 +38,7 @@ const flexCenter: CSSProperties = {
 };
 
 const infoText: CSSProperties = {
-  maxWidth: "50%",
+  maxWidth: "40%",
+  margin: "auto",
+  fontSize: "1.3rem",
 };

@@ -1,31 +1,22 @@
 import React, { CSSProperties } from "react";
 
 interface NavState {
-  xv: Boolean;
-  whatWeOffer: Boolean;
-  projects: Boolean;
-  whoWeAre: Boolean;
+  sectionIndex: number
 }
 
 class NavList extends React.Component<{}, NavState> {
   constructor(props: any) {
     super(props);
     this.state = {
-      xv: true,
-      whatWeOffer: false,
-      projects: false,
-      whoWeAre: false,
+      sectionIndex: 0
     };
   }
   componentDidMount() {
     // this.setState({ xv: true});
   }
   render() {
-    const xv = this.state.xv;
-    const whatWeOffer = this.state.whatWeOffer;
-    const projects = this.state.projects;
-    const whoWeAre = this.state.whoWeAre;
-    if (xv) {
+    const index = this.state.sectionIndex;
+    if (index === 0) {
       return (
         <div>
           <ul style={navListStyle}>
@@ -40,7 +31,7 @@ class NavList extends React.Component<{}, NavState> {
           </ul>
         </div>
       );
-    } else if (whatWeOffer) {
+    } else {
       <div>
         <ul style={navListStyle}>
           <li style={navListItemStyle}>what we offer</li>

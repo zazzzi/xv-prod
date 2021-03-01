@@ -4,6 +4,7 @@ import LogoSmall from "./LogoSmall";
 import NavList from "./NavList";
 import PageElement from "./PageElements";
 
+import "../overrides.css";
 
 function App() {
   function handleSectionChange(origin: any, destination: any, direction: any) {
@@ -20,6 +21,8 @@ function App() {
 
       <ReactFullpage
       //fullpage options
+      navigation
+      navigationTooltips={['xv production ', 'what we do', 'project', 'what we offer']}
       onLeave={handleSectionChange}
       licenseKey={"YOUR_KEY_HERE"}
       scrollingSpeed={1000} /* Options here */

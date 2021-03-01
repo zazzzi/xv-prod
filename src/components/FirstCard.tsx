@@ -1,7 +1,5 @@
 import React, { CSSProperties } from "react";
-import ReactFullpage from "@fullpage/react-fullpage";
 import BackgroundImage from "./BackgroundImage";
-import { flex } from "../css";
 
 
 

@@ -6,10 +6,7 @@ import PageElement from "./PageElements";
 import "../overrides.css";
 
 function App() {
-  function handleSectionChange(origin: any, destination: any, direction: any) {
-    console.log(origin, destination, direction);
- 
-  }
+  
 
   return (
     <React.Fragment>
@@ -18,12 +15,13 @@ function App() {
 
       <ReactFullpage
       //fullpage options
+      licenseKey={"YOUR_KEY_HERE"}   
       navigation
-      navigationTooltips={['', 'what we do', 'projects', 'what we offer']}
-      onLeave={handleSectionChange}
-      licenseKey={"YOUR_KEY_HERE"}
+      dragAndMove={true}
+      navigationTooltips={['xv production ', 'what we do', 'project', 'what we offer']}
+      anchors={['xv-production', 'what-we-do', 'project', 'what-we-offer']}
       scrollingSpeed={1000} /* Options here */
-      render={({ state, fullpageApi }: any) => {
+      render={({}: any) => {
 
         return <PageElement />;
 

@@ -1,11 +1,12 @@
 import { CSSProperties } from "react";
+import ThirdCard from "./ThirdCard";
+import fabricSample from "../assets/pictures/samples-4.jpg";
 
 export default function FirstCard() {
   return (
     <div className="section">
       <div style={flexCenter}>
         <p style={infoText}>
-          FOURTH CARD <br />
           XV PRODUCTION XV Production was born out of XV Atelier in 2018. The
           goal was to offer local design- and production services for other
           fashion- and textile brands. XV Production is a creative studio that
@@ -22,6 +23,7 @@ export default function FirstCard() {
           prototypes.
         </p>
       </div>
+      <div style={imgWrapper}></div>
     </div>
   );
 }
@@ -34,4 +36,19 @@ const flexCenter: CSSProperties = {
 
 const infoText: CSSProperties = {
   maxWidth: "50%",
+  zIndex: 2,
+};
+
+const imgWrapper: CSSProperties = {
+  position: "absolute",
+  top: "8%",
+  right: "70%",
+  height: "30%",
+  width: "25%",
+  backgroundColor: "white",
+  zIndex: 1,
+  backgroundImage: `url(${fabricSample})`,
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
 };

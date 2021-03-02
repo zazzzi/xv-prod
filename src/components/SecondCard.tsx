@@ -1,5 +1,8 @@
 import { CSSProperties } from "react";
-import studioView from "../assets/pictures/studioView-1.jpg";
+import shirtsOnHanger from "../assets/pictures/samples-6.jpg";
+import tShirts from "../assets/pictures/samples-5.jpg";
+import clothingOnHanger from "../assets/pictures/samples-3.jpg";
+import "animate.css/animate.css";
 
 export default function FirstCard() {
   return (
@@ -17,7 +20,10 @@ export default function FirstCard() {
           </p>
         </div>
 
-        <div style={imgWrapper}></div>
+        <div
+          style={imgWrapper}
+          className={"animate__animated animate__fadeInTopLeft"}
+        ></div>
       </div>
 
       <div className="slide">Slide 2{/* need some shit here  */}</div>
@@ -33,14 +39,16 @@ const flexCenter: CSSProperties = {
 
 const imgWrapper: CSSProperties = {
   position: "absolute",
-  top: "25%",
-  left: "7%",
-  height: "30rem",
-  width: "20rem",
-  backgroundColor: "white",
+  top: "14%",
+  left: "2%",
+  height: "30%",
+  width: "15%",
+  backgroundColor: "transparent",
   zIndex: -1,
-  backgroundImage: `url(${studioView})`,
-  backgroundSize: "cover",
+  backgroundImage: `url(${clothingOnHanger}), url(${shirtsOnHanger}), url(${tShirts})`,
+  backgroundSize: "30%, 30%, cover",
+  backgroundPosition: "5% 90%, 95% 10%, right",
+  backgroundRepeat: "no-repeat",
 };
 
 const infoText: CSSProperties = {

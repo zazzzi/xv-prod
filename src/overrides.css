@@ -4,16 +4,21 @@
 .fp-slidesNav ul li:hover a.active span,
 .fp-slidesNav ul li a.active span {
   background-color: transparent;
-  border: solid .01em;
- border-color: white;
- box-sizing: border-box;
+  border: solid 0.01em;
+  border-color: white;
+  box-sizing: border-box;
 }
 
-#fp-nav, .fp-right {
-    top: 0;
-    margin-top: 8.5rem;
+#fp-nav,
+.fp-right {
+  top: 0;
+  margin-top: 8.5rem;
 }
 
+.fp-slidesNav.fp-bottom {
+  text-align: center;
+  bottom: 20%;
+}
 
 /* navigation pilar */
 
@@ -22,14 +27,13 @@
   height: 30rem;
   border-width: 10rem !important;
   border-color: transparent !important;
-  cursor: url('./assets/arrowPrev.png'), auto !important;
+  cursor: url("./assets/arrowPrev.png"), auto !important;
 }
-
 
 .fp-next {
   top: 20%;
   height: 30rem;
   border-width: 10rem !important;
   border-color: transparent !important;
-  cursor: url('./assets/arrowNext.png'), auto !important;
+  cursor: url("./assets/arrowNext.png"), auto !important;
 }

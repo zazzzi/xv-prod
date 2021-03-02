@@ -37,7 +37,7 @@ const imgWrapper: CSSProperties = {
   height: "30rem",
   width: "20rem",
   backgroundColor: "white",
-  zIndex: -1
+  zIndex: -1,
 };
 
 const infoText: CSSProperties = {

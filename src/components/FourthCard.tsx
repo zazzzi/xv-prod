@@ -16,7 +16,7 @@ export default function FirstCard() {
           glamorous sides exist. Through being a local actor that work
           exclusively with in-house production, we offer our customers a close
           and transparent relationship. Our customers are more than welcome to
-          work collaboratively together with us in our 425 square-meter studio
+          work collaboratively together with us in our 425 square meter studio
           in Borås. As a result, both the communication and work can be done in
           a rapid phase, and we are able to jointly develop ideas and/or
           prototypes.

@@ -1,4 +1,5 @@
 import { CSSProperties } from "react";
+import studioView from "../assets/pictures/studioView-1.jpg";
 
 export default function FirstCard() {
   return (
@@ -38,6 +39,8 @@ const imgWrapper: CSSProperties = {
   width: "20rem",
   backgroundColor: "white",
   zIndex: -1,
+  backgroundImage: `url(${studioView})`,
+  backgroundSize: "cover",
 };
 
 const infoText: CSSProperties = {

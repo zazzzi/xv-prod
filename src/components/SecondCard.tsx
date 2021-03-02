@@ -4,7 +4,6 @@ export default function FirstCard() {
   return (
     //   what we do
     <div className="section">
-
       <div className="slide">
         <div style={{ ...flexCenter, ...infoText }}>
           <p>
@@ -16,6 +15,8 @@ export default function FirstCard() {
             ability to meet our customers wherever they might be their process.
           </p>
         </div>
+
+        <div style={imgWrapper}></div>
       </div>
 
       <div className="slide">Slide 2{/* need some shit here  */}</div>
@@ -27,6 +28,16 @@ const flexCenter: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+};
+
+const imgWrapper: CSSProperties = {
+  position: "absolute",
+  top: "25%",
+  left: "7%",
+  height: "30rem",
+  width: "20rem",
+  backgroundColor: "white",
+  zIndex: -1
 };
 
 const infoText: CSSProperties = {

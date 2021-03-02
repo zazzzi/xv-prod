@@ -24,6 +24,7 @@ class ThirdCard extends React.Component<{}> {
       //   projects
       <div className="section">
         <div className="slide">
+          <div style={imgWrapper}></div>
           <div style={flexCenter}>
             <p style={infoText}>
               TURD CARD <br />
@@ -65,5 +66,15 @@ const flexCenter: CSSProperties = {
 
 const infoText: CSSProperties = {
   maxWidth: "50%",
+};
+
+const imgWrapper: CSSProperties = {
+  position: "absolute",
+  top: "40%",
+  right: "60%",
+  height: "30rem",
+  width: "20rem",
+  backgroundColor: "white",
+  zIndex: -1
 };
 

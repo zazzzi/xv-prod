@@ -1,4 +1,5 @@
 import { Component } from "react";
+import cross from "../assets/cross.png";
 
 interface IState {
   isShown: boolean;
@@ -24,7 +25,7 @@ class PresentationDiv extends Component<
     const content: string = this.props.content;
     const title: string = this.props.title;
     return (
-      <div>
+      <div className="presentationDiv">
         <div
           onClick={() => {
             if (this.state.isShown === false) {
@@ -38,6 +39,7 @@ class PresentationDiv extends Component<
 
           {this.state.isShown && <p>{content}</p>}
         </div>
+        <img src={cross} draggable="false" alt="" />
       </div>
     );
   }

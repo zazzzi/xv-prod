@@ -17,8 +17,9 @@ function App() {
       //fullpage options
       licenseKey={"YOUR_KEY_HERE"}   
       navigation
+      loopHorizontal={false}
       dragAndMove={true}
-      navigationTooltips={['xv production ', 'what we do', 'project', 'what we offer']}
+      navigationTooltips={['', 'what we do', 'project', 'what we offer']}
       anchors={['xv-production', 'what-we-do', 'project', 'what-we-offer']}
       scrollingSpeed={1000} /* Options here */
       render={({}: any) => {

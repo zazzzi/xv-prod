@@ -6,11 +6,11 @@ import '../index.css'
 export default function SocLinks() {
   return (
     <div style={socLinksStyle}  >
-      <a href="https://www.instagram.com/xv.production/">
+      <a href="https://www.instagram.com/xv.production/" target='_blank'>
         <img src={fbLogo} alt="facebook" className='bigOnHover'/>
       </a>
-      <a href="https://www.facebook.com/xv.productioninhouse">
-          <img src={instaLogo} alt="instagram" className='bigOnHover'/>
+      <a href="https://www.facebook.com/xv.productioninhouse" target='_blank'>
+          <img src={instaLogo} alt="instagram" className='bigOnHover' />
       </a>
     </div>
   );

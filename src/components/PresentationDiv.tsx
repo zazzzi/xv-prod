@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component, CSSProperties } from "react";
 import cross from "../assets/cross.png";
 
 interface IState {
@@ -25,7 +25,8 @@ class PresentationDiv extends Component<
     const content: string = this.props.content;
     const title: string = this.props.title;
     return (
-      <div className="presentationDiv">
+      <div style={contentWrapper}>
+      <div style={serviceWrapper}>
         <div
           onClick={() => {
             if (this.state.isShown === false) {
@@ -39,9 +40,30 @@ class PresentationDiv extends Component<
 
           {this.state.isShown && <p>{content}</p>}
         </div>
-        <img src={cross} draggable="false" alt="" />
+        <img src={cross} draggable="false" alt="" style={crossStyle}/>
+      </div>
       </div>
     );
   }
 }
+
+
+const serviceWrapper: CSSProperties = {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  width: "50rem"
+}
+
+const contentWrapper: CSSProperties = {
+  display: "flex",
+  justifyContent: "center",
+}
+
+const crossStyle: CSSProperties = {
+  width: "3rem",
+  height: "3rem"
+}
+
+
 export default PresentationDiv;

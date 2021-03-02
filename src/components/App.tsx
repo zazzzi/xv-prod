@@ -22,7 +22,7 @@ function App() {
       navigationTooltips={['', 'what we do', 'project', 'what we offer']}
       anchors={['xv-production', 'what-we-do', 'project', 'what-we-offer']}
       scrollingSpeed={1000} /* Options here */
-      render={({}: any) => {
+      render={() => {
 
         return <PageElement />;
 

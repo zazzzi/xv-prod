@@ -1,7 +1,7 @@
-import React, { CSSProperties } from "react";
+import { CSSProperties } from "react";
 import background from "../assets/landing-page.png";
 import logo from "../assets/xvproduction-logo.png";
-import { flex } from "../css";
+import 'animate.css/animate.css'
 
 export default function BackgroundImage() {
   
@@ -9,7 +9,7 @@ export default function BackgroundImage() {
   return (
     // tomma taggar är fragments skapar div
     <>
-    <img src={logo} draggable="false" style={logoStyle} alt="" />
+    <img src={logo} draggable="false" className='animate__animated animate__fadeInUp' style={logoStyle} alt="" />
     <img src={background} draggable="false" style={backgroundStyle} alt="" />
     </>
     );
@@ -27,9 +27,6 @@ const backgroundStyle: CSSProperties = {
 const logoStyle: CSSProperties = {
   position: "fixed",
   left: "25%",
-  // right: 0,
-  // bottom: 0,
   width: "50%",
-  zIndex: 11
-
+  zIndex: 11,
 };

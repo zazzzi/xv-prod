@@ -26,7 +26,6 @@ const backgroundStyle: CSSProperties = {
 
 const logoStyle: CSSProperties = {
   position: "fixed",
-  top: "25%",
   left: "25%",
   // right: 0,
   // bottom: 0,

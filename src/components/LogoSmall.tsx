@@ -15,4 +15,7 @@ const logoStyle: CSSProperties = {
     right: 25,
     top: 40, 
     zIndex: 20,
+    width: "5rem",
+    height: "1.45rem"
+
 }

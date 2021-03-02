@@ -49,14 +49,8 @@ class ThirdCard extends React.Component<{}> {
           <PresentationDiv content={stylingContent} title="Styling" />
           <PresentationDiv content={mendingContent} title="Mending" />
           <PresentationDiv content={packagingContent} title="Packaging" />
-          <PresentationDiv
-            content={prodDevContent}
-            title="Production Development"
-          />
-          <PresentationDiv
-            content={patternMaking}
-            title="Pattern making and grading"
-          />
+          <PresentationDiv content={prodDevContent} title="Production Development"/>
+          <PresentationDiv content={patternMaking} title="Pattern making and grading"/>
         </div>
 
         <div>

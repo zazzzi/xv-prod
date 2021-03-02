@@ -4,6 +4,7 @@ import LogoSmall from "./LogoSmall";
 import PageElement from "./PageElements";
 
 import "../overrides.css";
+import SocLinks from "./SocLinks";
 
 function App() {
   
@@ -12,6 +13,7 @@ function App() {
     <React.Fragment>
       
       <LogoSmall />
+      <SocLinks />
 
       <ReactFullpage
       //fullpage options

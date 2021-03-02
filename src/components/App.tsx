@@ -7,33 +7,27 @@ import "../overrides.css";
 import SocLinks from "./SocLinks";
 
 function App() {
-  
-
   return (
     <React.Fragment>
-      
       <LogoSmall />
       <SocLinks />
 
       <ReactFullpage
-      //fullpage options
-      licenseKey={"YOUR_KEY_HERE"}   
-      navigation
-      loopHorizontal={false}
-      dragAndMove={true}
-      navigationTooltips={['', 'what we do', 'project', 'what we offer']}
-      anchors={['xv-production', 'what-we-do', 'project', 'what-we-offer']}
-      scrollingSpeed={1000} /* Options here */
-      render={() => {
-
-        return <PageElement />;
-
-      }}
-    />
-
+        //fullpage options
+        licenseKey={"YOUR_KEY_HERE"}
+        navigation
+        loopHorizontal={false}
+        dragAndMove={true}
+        slidesNavigation={true}
+        navigationTooltips={["", "what we do", "project", "what we offer"]}
+        anchors={["xv-production", "what-we-do", "project", "what-we-offer"]}
+        scrollingSpeed={1000} /* Options here */
+        render={() => {
+          return <PageElement />;
+        }}
+      />
     </React.Fragment>
   );
 }
-
 
 export default App;

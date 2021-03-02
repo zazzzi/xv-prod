@@ -1,10 +1,10 @@
-import React, { CSSProperties } from "react";
+import { CSSProperties } from "react";
 import logoSmall from "../assets/logo_small.png";
 
 
 export default function LogoSmall() {
     return (
-        <a href="">
+        <a href="#xv-production">
             <img src={logoSmall} alt="XV-Logo" style={logoStyle}/>
         </a>
     )

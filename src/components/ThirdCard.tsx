@@ -1,14 +1,8 @@
 import React, { CSSProperties } from "react";
 import PresentationDiv from "./PresentationDiv";
 
-const sampleMakingContent: string =
-  "We gladly work close together with our customers to jointly develop products and samples. As a creative studio, we see solutions rather than limitations and problems. We have experience in product development in terms of function, design and remake development.";
-
 class ThirdCard extends React.Component<{}> {
-  constructor(props: any) {
-    super(props);
-  }
-
+  
   // const whatToShow = "";
   // const [isShown, setIsShown] = useState(false);
 
@@ -30,6 +24,7 @@ class ThirdCard extends React.Component<{}> {
       //   projects
       <div className="section">
         <div className="slide">
+          <div style={imgWrapper}></div>
           <div style={flexCenter}>
             <p style={infoText}>
               TURD CARD <br />
@@ -73,6 +68,13 @@ const infoText: CSSProperties = {
   maxWidth: "50%",
 };
 
-const hidden: CSSProperties = {
-  display: "none",
+const imgWrapper: CSSProperties = {
+  position: "absolute",
+  top: "40%",
+  right: "60%",
+  height: "30rem",
+  width: "20rem",
+  backgroundColor: "white",
+  zIndex: -1
 };
+

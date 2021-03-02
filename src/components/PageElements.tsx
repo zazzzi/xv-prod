@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import FirstCard from "./FirstCard";
 import SecondCard from "./SecondCard";

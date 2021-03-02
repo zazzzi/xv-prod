@@ -26,9 +26,7 @@ class ThirdCard extends React.Component<{}> {
       //   projects
       <div className="section">
         <div className="slide">
-          <div style={imgWrapper}>
-            {/* <img src={lovisaSewing} alt="" /> */}
-          </div>
+          <div style={imgWrapper}></div>
           <div style={flexCenter}>
             <p style={infoText}>
               TURD CARD <br />
@@ -100,18 +98,20 @@ const flexColumn: CSSProperties = {
 
 const infoText: CSSProperties = {
   maxWidth: "30%",
+  zIndex: 2,
 };
 
 const imgWrapper: CSSProperties = {
   position: "absolute",
-  top: "40%",
-  right: "60%",
-  height: "30rem",
-  width: "20rem",
+  top: "10%",
+  right: "55%",
+  height: "70%",
+  width: "10%",
   backgroundColor: "white",
-  zIndex: -1,
+  zIndex: 1,
   backgroundImage: `url(${lovisaSewing})`,
   backgroundSize: "cover",
+  backgroundPosition: "80% 30%",
 };
 
 const listWrapper: CSSProperties = {
@@ -125,4 +125,5 @@ const productionImg: CSSProperties = {
 
 const listStyling: CSSProperties = {
   lineHeight: "1.5rem",
+  zIndex: 2,
 };

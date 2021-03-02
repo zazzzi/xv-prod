@@ -10,7 +10,8 @@
 }
 
 #fp-nav, .fp-right {
-    top: 16%;
+    top: 0;
+    margin-top: 8.5rem;
 }
 
 

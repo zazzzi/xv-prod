@@ -25,7 +25,15 @@ class PresentationDiv extends Component<
     const title: string = this.props.title;
     return (
       <div>
-        <div onClick={() => this.setState({ isShown: true })}>
+        <div
+          onClick={() => {
+            if (this.state.isShown === false) {
+              this.setState({ isShown: true });
+            } else {
+                this.setState({ isShown: false});
+            }
+          }}
+        >
           <h2>{title}</h2>
 
           {this.state.isShown && <p>{content}</p>}

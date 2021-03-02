@@ -4,11 +4,13 @@ import LogoSmall from "./LogoSmall";
 import PageElement from "./PageElements";
 
 import "../overrides.css";
+import SocLinks from "./SocLinks";
 
 function App() {
   return (
     <React.Fragment>
       <LogoSmall />
+      <SocLinks />
 
       <ReactFullpage
         //fullpage options

@@ -5,7 +5,6 @@ import SecondCard from "./SecondCard";
 import ThirdCard from "./ThirdCard";
 import FourthCard from "./FourthCard";
 
-
 export default class PageElement extends React.Component {
   onLeave(origin: any, destination: any, direction: any) {
     // console.log({origin});
@@ -16,14 +15,15 @@ export default class PageElement extends React.Component {
   afterLoad(origin: any, destination: any, direction: any) {
     console.log("After load: " + destination.index);
   }
-  afterSlideLoad(section: any, origin: any, destination: any, direction: any){
-    console.log('lol');
+  afterSlideLoad(section: any, origin: any, destination: any, direction: any) {
+    console.log("lol");
   }
 
   render() {
     return (
       <ReactFullpage
         licenseKey={"OPEN-SOURCE-GPLV3-LICENSE"}
+        // v2compatible={true}
         fullpage_api
         onLeave={this.onLeave.bind(this)}
         afterLoad={this.afterLoad.bind(this)}
@@ -36,14 +36,12 @@ export default class PageElement extends React.Component {
         scrollingSpeed={1000} /* Options here */
         render={({ state, fullpageApi }: any) => {
           return (
-
             <ReactFullpage.Wrapper>
               <FirstCard />
               <SecondCard />
               <ThirdCard />
               <FourthCard />
             </ReactFullpage.Wrapper>
-
           );
         }}
       />

@@ -4,7 +4,7 @@ import shirtsOnHanger from "../assets/pictures/samples-6.jpg";
 import tShirts from "../assets/pictures/samples-5.jpg";
 import clothingOnHanger from "../assets/pictures/samples-3.jpg";
 import "animate.css/animate.css";
-import FullpageWrapper from './App'
+import FullpageWrapper from "./App";
 
 interface IState {
   isOnScreen: boolean;
@@ -18,29 +18,27 @@ class SecondCard extends Component<{}, IState> {
     };
   }
 
-  
-  
   render() {
-    
     return (
       //   what we do
-    <div className="section">
-      <div className="slide">
-        <div style={{ ...flexCenter, ...infoText }}>
-          <p>
-            <b>XV Production</b> is a creative studio that collaborates with
-            fashion- and textile brands in a variety of projects.<br></br>
-            <br></br> As a creative studio, we work with all phases of the
-            production process - everything from the inception and initial idea,
-            to the design and the finished products. Our strength lies in our
-            ability to meet our customers wherever they might be their process.
-          </p>
-        </div>
-
-        <div
-          style={imgWrapper}
-          className={"animate__animated animate__fadeInTopLeft"}
-        ></div>
+      <div className="section">
+        <div className="slide">
+          <div style={{ ...flexCenter, ...infoText }}>
+            <p>
+              <b>XV Production</b> is a creative studio that collaborates with
+              fashion- and textile brands in a variety of projects.<br></br>
+              <br></br> As a creative studio, we work with all phases of the
+              production process - everything from the inception and initial
+              idea, to the design and the finished products. Our strength lies
+              in our ability to meet our customers wherever they might be their
+              process.
+            </p>
+            <div
+              id="animationDiv"
+              style={imgWrapper}
+              className={"animate__animated animate__fadeInTopLeft"}
+            ></div>
+          </div>
         </div>
 
         <div className="slide">
@@ -73,7 +71,7 @@ class SecondCard extends Component<{}, IState> {
               <div style={cardStyling}>
                 <h4>Linnéa Magnusdotter</h4>
                 <p>
-                  <i>Design och Styling</i>
+                  <i>Design & Styling</i>
                 </p>
                 <a href="mailto: linnea@xv-production.com">
                   linnea@xv-production.com
@@ -91,7 +89,6 @@ class SecondCard extends Component<{}, IState> {
             </div>
           </div>
         </div>
-
       </div>
     );
   }

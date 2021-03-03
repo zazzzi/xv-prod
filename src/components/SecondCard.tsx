@@ -1,12 +1,30 @@
-import { CSSProperties } from "react";
+import { Component, CSSProperties } from "react";
+import ReactFullpage from "@fullpage/react-fullpage";
 import shirtsOnHanger from "../assets/pictures/samples-6.jpg";
 import tShirts from "../assets/pictures/samples-5.jpg";
 import clothingOnHanger from "../assets/pictures/samples-3.jpg";
 import "animate.css/animate.css";
 
-export default function FirstCard() {
-  return (
-    //   what we do
+interface IState {
+  isOnScreen: boolean;
+}
+
+class SecondCard extends Component<{fullpageApi?: any}, IState> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      isOnScreen: false,
+    };
+  }
+  
+  render() {
+    console.log(this.props.fullpageApi);
+    
+    // function checkIfOnScreen() {
+
+    // }
+    return (
+      //   what we do
     <div className="section">
       <div className="slide">
         <div style={{ ...flexCenter, ...infoText }}>
@@ -24,17 +42,72 @@ export default function FirstCard() {
           style={imgWrapper}
           className={"animate__animated animate__fadeInTopLeft"}
         ></div>
-      </div>
+        </div>
 
-      <div className="slide">Slide 2{/* need some shit here  */}</div>
-    </div>
-  );
+        <div className="slide">
+          <h2 style={flexCenter}>Who we are</h2>
+          <div style={{ ...flexCenter }}>
+            <div style={{ ...flexCenter, ...flexColumn }}>
+              <div
+                style={cardStyling}
+                className="animate__animated animate__bounce"
+              >
+                <h4>Evelina Ingvarsson</h4>
+                <p>
+                  <i>Art Director</i>
+                </p>
+                <a href="mailto:evelina@xv-production.com">
+                  evelina@xv-production.com
+                </a>
+              </div>
+              <div style={cardStyling}>
+                <h4>Felicia Lundberg </h4>
+                <p>
+                  <i>Projectmanager</i>
+                </p>
+                <a href="mailto:felicia@xv-production.com">
+                  felicia@xv-production.com
+                </a>
+              </div>
+            </div>
+            <div style={{ ...flexCenter, ...flexColumn }}>
+              <div style={cardStyling}>
+                <h4>Linnéa Magnusdotter</h4>
+                <p>
+                  <i>Design och Styling</i>
+                </p>
+                <a href="mailto: linnea@xv-production.com">
+                  linnea@xv-production.com
+                </a>
+              </div>
+              <div style={cardStyling}>
+                <h4>Lovisa Nolander</h4>
+                <p>
+                  <i>Pattern making</i>
+                </p>
+                <a href="mailto:lovisa@xv-production.com ">
+                  lovisa@xv-production.com{" "}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    );
+  }
 }
+
+export default SecondCard;
 
 const flexCenter: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+};
+
+const flexColumn: CSSProperties = {
+  flexDirection: "column",
 };
 
 const imgWrapper: CSSProperties = {
@@ -51,6 +124,13 @@ const imgWrapper: CSSProperties = {
   backgroundRepeat: "no-repeat",
 };
 
+const cardStyling: CSSProperties = {
+  margin: "1rem",
+  border: "2px solid",
+  borderRadius: "15px",
+  borderColor: "grey",
+  padding: "1rem",
+};
 const infoText: CSSProperties = {
   maxWidth: "40%",
   margin: "auto",

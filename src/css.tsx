@@ -9,3 +9,4 @@ export const navigation: CSSProperties = {
     color: 'red',
     textDecoration: 'underline'
 }
+

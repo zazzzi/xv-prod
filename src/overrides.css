@@ -27,7 +27,7 @@
   height: 30rem;
   border-width: 10rem !important;
   border-color: transparent !important;
-  cursor: url("./assets/arrowPrev.png"), auto !important;
+  cursor: url("./assets/arrowPrev.png") 63 46.5, auto !important;
 }
 
 .fp-next {
@@ -35,5 +35,5 @@
   height: 30rem;
   border-width: 10rem !important;
   border-color: transparent !important;
-  cursor: url("./assets/arrowNext.png"), auto !important;
+  cursor: url("./assets/arrowNext.png") 63 46.5, auto !important;
 }

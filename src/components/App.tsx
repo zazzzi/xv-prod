@@ -2,7 +2,6 @@ import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import LogoSmall from "./LogoSmall";
 import PageElement from "./PageElements";
-
 import "../overrides.css";
 import SocLinks from "./SocLinks";
 
@@ -14,7 +13,9 @@ function App() {
 
       <ReactFullpage
         //fullpage options
-        licenseKey={"YOUR_KEY_HERE"}
+        licenseKey={"OPEN-SOURCE-GPLV3-LICENSE"}
+        fullpage_api
+        callbacks={"onLeave"}
         navigation
         loopHorizontal={false}
         dragAndMove={true}
@@ -24,6 +25,7 @@ function App() {
         scrollingSpeed={1000} /* Options here */
         render={() => {
           return <PageElement />;
+          
         }}
       />
     </React.Fragment>

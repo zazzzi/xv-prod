@@ -1,8 +1,4 @@
-import React, { Component, CSSProperties } from "react";
-
-interface IState {
-  modalOpen: boolean;
-}
+import { Component, CSSProperties } from "react";
 
 interface IProps {
   name: string;
@@ -10,11 +6,7 @@ interface IProps {
   email: string;
 }
 
-class ContactCard extends Component<
-  { name: string; role: string; email: string },
-  IState,
-  IProps
-> {
+class ContactCard extends Component<IProps> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -22,7 +14,6 @@ class ContactCard extends Component<
     };
   }
 
-  
   render() {
     return (
       <div>

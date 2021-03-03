@@ -4,25 +4,24 @@ import shirtsOnHanger from "../assets/pictures/samples-6.jpg";
 import tShirts from "../assets/pictures/samples-5.jpg";
 import clothingOnHanger from "../assets/pictures/samples-3.jpg";
 import "animate.css/animate.css";
+import FullpageWrapper from './App'
 
 interface IState {
   isOnScreen: boolean;
 }
 
-class SecondCard extends Component<{fullpageApi?: any}, IState> {
+class SecondCard extends Component<{}, IState> {
   constructor(props: any) {
     super(props);
     this.state = {
       isOnScreen: false,
     };
   }
+
+  
   
   render() {
-    console.log(this.props.fullpageApi);
     
-    // function checkIfOnScreen() {
-
-    // }
     return (
       //   what we do
     <div className="section">

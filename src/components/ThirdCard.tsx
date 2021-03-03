@@ -7,15 +7,15 @@ import TitleComponent from "./TitleComponent";
 
 import tShirts from "../assets/pictures/samples-5.jpg";
 
-interface Props {
+interface IProp {
   activePageSection: number;
   activePageSlide: number;
 }
 
-class ThirdCard extends React.Component<Props> {
+class ThirdCard extends React.Component<IProp> {
   render() {
     const { activePageSection, activePageSlide } = this.props;
-    const animation = "animate__animated animate__fadeInTopLeft";
+    const animation = "animate__animated animate__fadeInUp";
     const animation2 =
       activePageSection === 2 && activePageSlide === 1 ? animation : "";
 
@@ -52,47 +52,49 @@ class ThirdCard extends React.Component<Props> {
         </div>
         {/* second slide  */}
         <div className="slide">
+          
           <TitleComponent smallTitle="services" title="What we do" />
+
           {/* services what we offer */}
 
-          <div style={listWrapper}>
-            <PresentationDiv
-              content={sampleMakingContent}
-              title="Sample Making"
-              img={tShirts}
-            />
-            <PresentationDiv
-              content={stylingContent}
-              title="Styling"
-              img={lovisaSewing}
-            />
-            <PresentationDiv
-              content={mendingContent}
-              title="Mending"
-              img={tShirts}
-            />
-            <PresentationDiv
-              content={packagingContent}
-              title="Packaging"
-              img={tShirts}
-            />
-            <PresentationDiv
-              content={prodDevContent}
-              title="Production Development"
-              img={tShirts}
-
-            />
-            <PresentationDiv
-              content={patternMaking}
-              title="Pattern making and grading"
-              img={tShirts}
-            />
+          <div style={listWrapper} className={animation2}>
+            {activePageSection === 2 && activePageSlide === 1 ? (
+              <div>
+                <PresentationDiv
+                  content={sampleMakingContent}
+                  title="Sample Making"
+                  img={tShirts}
+                />
+                <PresentationDiv
+                  content={stylingContent}
+                  title="Styling"
+                  img={lovisaSewing}
+                />
+                <PresentationDiv
+                  content={mendingContent}
+                  title="Mending"
+                  img={tShirts}
+                />
+                <PresentationDiv
+                  content={packagingContent}
+                  title="Packaging"
+                  img={tShirts}
+                />
+                <PresentationDiv
+                  content={prodDevContent}
+                  title="Production Development"
+                  img={tShirts}
+                />
+                <PresentationDiv
+                  content={patternMaking}
+                  title="Pattern making and grading"
+                  img={tShirts}
+                />{" "}
+              </div>
+            ) : null}
           </div>
         </div>
 
-        <div>
-          <h2>PARTNERS </h2>
-        </div>
       </div>
     );
   }

@@ -4,14 +4,16 @@ import "animate.css/animate.css";
 
 interface IState {
   isShown: boolean;
+  isHover?: boolean;
 }
 interface IProps {
   content: string;
   title: string;
+  img?: string;
 }
 
 class PresentationDiv extends Component<
-  { content: string; title: string },
+  { content: string; title: string; img?: string },
   IState,
   IProps
 > {
@@ -19,6 +21,7 @@ class PresentationDiv extends Component<
     super(props);
     this.state = {
       isShown: false,
+      isHover: false,
     };
   }
 
@@ -34,28 +37,45 @@ class PresentationDiv extends Component<
             this.setState({ isShown: false });
           }
         }}
+        onMouseOver={() => {
+          this.setState({ isHover: true });
+        }}
+        onMouseOut={() => {
+          this.setState({ isHover: false });
+        }}
       >
         <div style={contentWrapper}>
-          <div style={serviceWrapper}>
-          <div style={titleWrapper}>
-            <h2>{title}</h2>
+          {this.state.isHover && (
+            <img src={this.props.img} style={hoverImg} alt="" />
+          )}
 
-            {this.state.isShown && (
-              <p
-              style={textStyle}
-              className="animate__animated animate__fadeIn "
-              >
-                {content}
-              </p>
-            )}
+          <div style={serviceWrapper}>
+            <div style={titleWrapper}>
+              <h2>{title}</h2>
+
+              {this.state.isShown && (
+                <p
+                  style={textStyle}
+                  className="animate__animated animate__fadeIn "
+                >
+                  {content}
+                </p>
+              )}
             </div>
-          <img src={cross} draggable="false" alt="" style={crossStyle} />
+            <img src={cross} draggable="false" alt="" style={crossStyle} />
           </div>
         </div>
       </div>
     );
   }
 }
+
+const hoverImg: CSSProperties = {
+  position: "absolute",
+  width: "7rem",
+  // left
+  // top:
+};
 
 const titleWrapper: CSSProperties = {
   display: "flex",
@@ -68,7 +88,7 @@ const serviceWrapper: CSSProperties = {
   justifyContent: "space-between",
   width: "100%",
 
-  borderBottom: "solid .1rem "
+  borderBottom: "solid .1rem ",
 };
 
 const contentWrapper: CSSProperties = {
@@ -79,7 +99,7 @@ const contentWrapper: CSSProperties = {
 const crossStyle: CSSProperties = {
   width: "2rem",
   height: "2rem",
-  marginTop: "1rem"
+  marginTop: "1rem",
 };
 
 const textStyle: CSSProperties = {

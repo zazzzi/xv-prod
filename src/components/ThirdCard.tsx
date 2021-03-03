@@ -5,6 +5,8 @@ import productionImage from "../assets/production.png";
 import lovisaSewing from "../assets/pictures/lovisaSewing-2.jpg";
 import TitleComponent from "./TitleComponent";
 
+import tShirts from "../assets/pictures/samples-5.jpg";
+
 interface Props {
   activePageSection: number;
   activePageSlide: number;
@@ -34,8 +36,8 @@ class ThirdCard extends React.Component<Props> {
       //   projects
       <div className="section">
         <div className="slide">
-          <div style={imgWrapper}></div>
           <div style={flexCenter}>
+            <div style={imgWrapper}></div>
             <p style={infoText}>
               TURD CARD <br />
               From our studio in Kamgarn, Borås we work with everything from
@@ -52,21 +54,38 @@ class ThirdCard extends React.Component<Props> {
         <div className="slide">
           <TitleComponent smallTitle="services" title="What we do" />
           {/* services what we offer */}
-          <div style={listWrapper} className={animation2}>
+
+          <div style={listWrapper}>
             <PresentationDiv
               content={sampleMakingContent}
               title="Sample Making"
+              img={tShirts}
             />
-            <PresentationDiv content={stylingContent} title="Styling" />
-            <PresentationDiv content={mendingContent} title="Mending" />
-            <PresentationDiv content={packagingContent} title="Packaging" />
+            <PresentationDiv
+              content={stylingContent}
+              title="Styling"
+              img={lovisaSewing}
+            />
+            <PresentationDiv
+              content={mendingContent}
+              title="Mending"
+              img={tShirts}
+            />
+            <PresentationDiv
+              content={packagingContent}
+              title="Packaging"
+              img={tShirts}
+            />
             <PresentationDiv
               content={prodDevContent}
               title="Production Development"
+              img={tShirts}
+
             />
             <PresentationDiv
               content={patternMaking}
               title="Pattern making and grading"
+              img={tShirts}
             />
           </div>
         </div>

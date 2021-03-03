@@ -5,6 +5,7 @@ import SecondCard from "./SecondCard";
 import ThirdCard from "./ThirdCard";
 import FourthCard from "./FourthCard";
 
+
 interface State {
   activePageSection: number;
   activePageSlide: number;
@@ -21,16 +22,19 @@ export default class PageElement extends React.Component<{}, State> {
       activePageSection: destination.index
     })
   }
+
   afterSlideLoad = (section: any, origin: any, destination: any, direction: any) => {
     this.setState({
       activePageSlide: destination.index
     })
+
   }
 
   render() {
     return (
       <ReactFullpage
         licenseKey={"OPEN-SOURCE-GPLV3-LICENSE"}
+        // v2compatible={true}
         fullpage_api
         onLeave={this.onLeave} //vertical
         afterSlideLoad={this.afterSlideLoad} //horizontal
@@ -43,14 +47,12 @@ export default class PageElement extends React.Component<{}, State> {
         scrollingSpeed={1000} /* Options here */
         render={({}: any) => {
           return (
-
             <ReactFullpage.Wrapper>
               <FirstCard />
               <SecondCard />
               <ThirdCard {...this.state} />
               <FourthCard />
             </ReactFullpage.Wrapper>
-
           );
         }}
       />

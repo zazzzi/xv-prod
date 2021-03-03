@@ -28,12 +28,15 @@ class SecondCard extends Component {
               in our ability to meet our customers wherever they might be their
               process.
             </p>
-          </div>
 
+          </div>
           <div
             style={imgWrapper}
             className={"animate__animated animate__fadeInTopLeft"}
           ></div>
+
+          </div>
+
         </div>
 
         <div className="slide">
@@ -65,6 +68,7 @@ class SecondCard extends Component {
                 role="Pattern making"
                 email="lovisa@xv-production.com"
               />
+
               </div>
             </div>
           </div>

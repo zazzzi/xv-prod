@@ -1,7 +1,7 @@
-import { Component, CSSProperties } from "react";
+import React, { Component, CSSProperties } from "react";
 
 interface IState {
-  beenClicked: boolean;
+  modalOpen: boolean;
 }
 
 interface IProps {
@@ -18,13 +18,15 @@ class ContactCard extends Component<
   constructor(props: any) {
     super(props);
     this.state = {
-      beenClicked: false,
+      modalOpen: false,
     };
   }
+
+  
   render() {
     return (
       <div>
-        <div style={cardStyling} className="animate__animated animate__bounce">
+        <div style={cardStyling}>
           <h4>{this.props.name}</h4>
           <p>
             <i>{this.props.role}</i>
@@ -37,11 +39,10 @@ class ContactCard extends Component<
 }
 export default ContactCard;
 
-
 const cardStyling: CSSProperties = {
-    margin: "1rem",
-    border: "2px solid",
-    borderRadius: "15px",
-    borderColor: "grey",
-    padding: "1rem",
-  };
+  margin: "1rem",
+  border: "2px solid",
+  borderRadius: "15px",
+  borderColor: "grey",
+  padding: "1rem",
+};

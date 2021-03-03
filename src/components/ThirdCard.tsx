@@ -4,11 +4,19 @@ import "animate.css/animate.css";
 import productionImage from "../assets/production.png";
 import lovisaSewing from "../assets/pictures/lovisaSewing-2.jpg";
 import TitleComponent from "./TitleComponent";
-class ThirdCard extends React.Component<{}> {
-  // const whatToShow = "";
-  // const [isShown, setIsShown] = useState(false);
 
+interface Props {
+  activePageSection: number;
+  activePageSlide: number;
+}
+
+class ThirdCard extends React.Component<Props> {
   render() {
+    const { activePageSection, activePageSlide } = this.props;
+    const animation = "animate__animated animate__fadeInTopLeft";
+    const animation2 =
+      activePageSection === 2 && activePageSlide === 1 ? animation : "";
+
     const sampleMakingContent: string =
       "We gladly work close together with our customers to jointly develop products and samples. As a creative studio, we see solutions rather than limitations and problems. We have experience in product development in terms of function, design and remake development.";
     const stylingContent: string =
@@ -37,31 +45,29 @@ class ThirdCard extends React.Component<{}> {
             </p>
           </div>
           <div style={flexColumn}>
-            <ul style={listStyling}>
-              {/* <li>Cutting machine</li>
-              <li>Straight stitch</li>
-              <li>Multithread Overlock</li>
-              <li>Leather machine</li>
-              <li>Seam covering machine</li>
-              <li>Button sewing machine keyhole (blazer)</li>
-              <li>Button sewing machine (shirts, blouses) </li>
-              <li>Heat transfer machine​</li>
-              <li>Press and steam</li> */}
-            </ul>
             <img src={productionImage} alt="" style={productionImg} />
           </div>
         </div>
         {/* second slide  */}
         <div className="slide">
-          <TitleComponent smallTitle="services" title="What we do"/>
-              {/* services what we offer */}
-          <div style={listWrapper}>
-            <PresentationDiv content={sampleMakingContent} title="Sample Making"/>
+          <TitleComponent smallTitle="services" title="What we do" />
+          {/* services what we offer */}
+          <div style={listWrapper} className={animation2}>
+            <PresentationDiv
+              content={sampleMakingContent}
+              title="Sample Making"
+            />
             <PresentationDiv content={stylingContent} title="Styling" />
             <PresentationDiv content={mendingContent} title="Mending" />
             <PresentationDiv content={packagingContent} title="Packaging" />
-            <PresentationDiv content={prodDevContent} title="Production Development" />
-            <PresentationDiv content={patternMaking}  title="Pattern making and grading" />
+            <PresentationDiv
+              content={prodDevContent}
+              title="Production Development"
+            />
+            <PresentationDiv
+              content={patternMaking}
+              title="Pattern making and grading"
+            />
           </div>
         </div>
 
@@ -114,9 +120,4 @@ const listWrapper: CSSProperties = {
 
 const productionImg: CSSProperties = {
   marginTop: "2rem",
-};
-
-const listStyling: CSSProperties = {
-  lineHeight: "1.5rem",
-  zIndex: 2,
 };

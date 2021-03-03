@@ -2,10 +2,9 @@ import React, { CSSProperties } from "react";
 import BackgroundImage from "./BackgroundImage";
 
 
-
 export default function FirstCard() {
   return (
-    <div className="section">
+    <div className={"section"}>
       <BackgroundImage />
       <div style={flexCenter}></div>
     </div>

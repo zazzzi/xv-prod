@@ -10,11 +10,7 @@ interface IProps {
   title: string;
 }
 
-class PresentationDiv extends Component<
-  { content: string; title: string },
-  IState,
-  IProps
-> {
+class PresentationDiv extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
@@ -26,7 +22,7 @@ class PresentationDiv extends Component<
     const content: string = this.props.content;
     const title: string = this.props.title;
     return (
-      <div
+      <div 
         onClick={() => {
           if (this.state.isShown === false) {
             this.setState({ isShown: true });

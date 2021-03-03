@@ -16,8 +16,9 @@ class TitleComponent extends Component<IProps> {
     const smallTitle: string = this.props.smallTitle;
     return (
       <div style={titleWrapper}>
-        <h4 style={smallTitleStyle}>{smallTitle}</h4>
-        <h1 style={titleStyle}>{title}</h1>
+     <h4 style={smallTitleStyle}>{smallTitle}</h4>
+      <h2 style={titleStyle}>{title}</h2>
+
       </div>
     );
   }

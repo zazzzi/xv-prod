@@ -25,7 +25,7 @@ class PresentationDiv extends Component<IProps, IState> {
     const content: string = this.props.content;
     const title: string = this.props.title;
     return (
-      <div 
+      <div
         onClick={() => {
           if (this.state.isShown === false) {
             this.setState({ isShown: true });
@@ -69,8 +69,7 @@ class PresentationDiv extends Component<IProps, IState> {
 const hoverImg: CSSProperties = {
   position: "absolute",
   width: "7rem",
-  // left
-  // top:
+  right: "7rem",
 };
 
 const titleWrapper: CSSProperties = {

@@ -6,12 +6,12 @@ import "animate.css/animate.css";
 import ContactCard from "./ContactCard";
 import TitleComponent from "./TitleComponent";
 
+interface IProps {
+  activePageSection: number;
+  activePageSlide: number;
+}
 
-
-class SecondCard extends Component {
-  constructor(props: any) {
-    super(props);
-  }
+class SecondCard extends Component<IProps> {
 
   render() {
     return (
@@ -28,49 +28,43 @@ class SecondCard extends Component {
               in our ability to meet our customers wherever they might be their
               process.
             </p>
-
           </div>
-          <div
-            style={imgWrapper}
-            className={"animate__animated animate__fadeInTopLeft"}
-          ></div>
-
-          </div>
-
+          <div style={imgWrapper}></div>
         </div>
 
         <div className="slide">
           <div style={{ ...flexCenter, ...flextColumn }}>
             <TitleComponent smallTitle="us at XV" title="contact" />
+          {this.props.activePageSection === 1 && this.props.activePageSlide === 1 ? (
             <div style={flexRow}>
+              {}
               <div>
+                <div>
+                  <ContactCard
+                    name="Evelina Ingvarsson"
+                    role="Art Director"
+                    email="evelina@xv-production.com"
+                  />
+                  <ContactCard
+                    name="Felicia Lundberg"
+                    role="Projectmanager"
+                    email="felicia@xv-production.com"
+                  />
+                </div>
+              </div>
               <div>
                 <ContactCard
-                  name="Evelina Ingvarsson"
-                  role="Art Director"
-                  email="evelina@xv-production.com"
+                  name="Linnéa Magnusdotter"
+                  role="Design & Styling"
+                  email="linnea@xv-production.com"
                 />
                 <ContactCard
-                  name="Felicia Lundberg"
-                  role="Projectmanager"
-                  email="felicia@xv-production.com"
+                  name="Lovisa Nolander"
+                  role="Pattern making"
+                  email="lovisa@xv-production.com"
                 />
               </div>
-            </div>
-            <div>
-              <ContactCard
-                name="Linnéa Magnusdotter"
-                role="Design och Styling"
-                email="linnea@xv-production.com"
-              />
-              <ContactCard
-                name="Lovisa Nolander"
-                role="Pattern making"
-                email="lovisa@xv-production.com"
-              />
-
-              </div>
-            </div>
+            </div>):null}
           </div>
         </div>
       </div>

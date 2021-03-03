@@ -49,7 +49,7 @@ export default class PageElement extends React.Component<{}, State> {
           return (
             <ReactFullpage.Wrapper>
               <FirstCard />
-              <SecondCard />
+              <SecondCard {...this.state} />
               <ThirdCard {...this.state} />
               <FourthCard />
             </ReactFullpage.Wrapper>

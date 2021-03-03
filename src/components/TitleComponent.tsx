@@ -1,5 +1,4 @@
 import { Component, CSSProperties } from "react";
-import cross from "../assets/cross.png";
 import "animate.css/animate.css";
 
 interface IProps {

@@ -2,6 +2,7 @@ import { CSSProperties } from 'react';
 import fabricSample from '../assets/pictures/samples-4.jpg';
 import studioViewSofa from '../assets/pictures/studioViewSofa.jpeg';
 
+
 export default function FirstCard() {
   return (
     <div className="section">

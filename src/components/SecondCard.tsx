@@ -11,10 +11,7 @@ interface IProps {
   activePageSlide: number;
 }
 
-class SecondCard extends Component <IProps> {
-  constructor(props: IProps) {
-    super(props);
-  }
+class SecondCard extends Component<IProps> {
 
   render() {
     return (
@@ -32,15 +29,13 @@ class SecondCard extends Component <IProps> {
               process.
             </p>
           </div>
-          <div
-            style={imgWrapper}
-            className={"animate__animated animate__fadeInTopLeft"}
-          ></div>
+          <div style={imgWrapper}></div>
         </div>
 
         <div className="slide">
           <div style={{ ...flexCenter, ...flextColumn }}>
             <TitleComponent smallTitle="us at XV" title="contact" />
+          {this.props.activePageSection === 1 && this.props.activePageSlide === 1 ? (
             <div style={flexRow}>
               {}
               <div>
@@ -69,7 +64,7 @@ class SecondCard extends Component <IProps> {
                   email="lovisa@xv-production.com"
                 />
               </div>
-            </div>
+            </div>):null}
           </div>
         </div>
       </div>

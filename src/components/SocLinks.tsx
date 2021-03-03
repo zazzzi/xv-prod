@@ -2,53 +2,56 @@ import { Component, CSSProperties } from "react";
 import fbLogo from "../assets/facebook.png";
 import instaLogo from "../assets/instagram.png";
 import "../index.css";
+import SocialMedia from "./SocialMedia";
 
 interface IStates {
-  isHovered: boolean;
+  fbIsHovered: boolean;
+  instaIsHovered: boolean;
 }
 class SocLinks extends Component<{}, IStates> {
   constructor(state: IStates) {
     super(state);
     this.state = {
-      isHovered: false,
+      fbIsHovered: false,
+      instaIsHovered: false,
     };
   }
 
+  isMouseOver() {}
+
   render() {
     return (
-      <div style={socLinksStyle} 
-      onMouseOver={() => {
-        this.setState({ isHovered: true });
-      }}
-      onMouseOut={() => {
-        this.setState({ isHovered: false });
-      }}
-      >
-        {this.state.isHovered ? (
-          <div style={bigOnHover}>
-            <a
-              href="https://www.facebook.com/xv.productioninhouse"
-              target="_blank"
-            >
-              <img src={fbLogo} alt="facebook" />
-            </a>
-            <a href="https://www.instagram.com/xv.production/" target="_blank">
-              <img src={instaLogo} alt="instagram" />
-            </a>
-          </div>
-        ) : (
-          <div>
-            <a
-              href="https://www.facebook.com/xv.productioninhouse"
-              target="_blank"
-            >
-              <img src={fbLogo} alt="facebook" />
-            </a>
-            <a href="https://www.instagram.com/xv.production/" target="_blank">
-              <img src={instaLogo} alt="instagram" />
-            </a>
-          </div>
-        )}
+      <div style={socLinksStyle}>
+        <div
+          onMouseOver={() => {
+            this.setState({ fbIsHovered: true });
+          }}
+          onMouseOut={() => {
+            this.setState({ fbIsHovered: false });
+          }}
+        >
+          <SocialMedia
+            linkTo="https://www.facebook.com/xv.productioninhouse"
+            logoFor={fbLogo}
+            alt="facebook"
+            style={this.state.fbIsHovered ? bigOnHover : undefined}
+          />
+        </div>
+        <div
+          onMouseOver={() => {
+            this.setState({ instaIsHovered: true });
+          }}
+          onMouseOut={() => {
+            this.setState({ instaIsHovered: false });
+          }}
+        >
+          <SocialMedia
+            linkTo="https://www.instagram.com/xv.production/"
+            logoFor={instaLogo}
+            alt="instagram"
+            style={this.state.instaIsHovered ? bigOnHover : undefined}
+          />
+        </div>
       </div>
     );
   }

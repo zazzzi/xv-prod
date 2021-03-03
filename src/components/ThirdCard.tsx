@@ -19,7 +19,7 @@ interface IProp {
 class ThirdCard extends React.Component<IProp> {
   render() {
     const { activePageSection, activePageSlide } = this.props;
-    const animation = "animate__animated animate__fadeInUp animate__faster 500ms";
+    const animation = "animate__animated animate__fadeInUp";
 
     const animation2 =
       activePageSection === 2 && activePageSlide === 1 ? animation : '';

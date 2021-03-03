@@ -42,9 +42,10 @@ export default class PageElement extends React.Component<{}, State> {
         loopHorizontal={false}
         dragAndMove={true}
         slidesNavigation={true}
+        resetSliders={true}
         navigationTooltips={["", "what we do", "project", "what we offer"]}
         anchors={["xv-production", "what-we-do", "project", "what-we-offer"]}
-        scrollingSpeed={1000} /* Options here */
+        scrollingSpeed={800} /* Options here */
         render={({}: any) => {
           return (
             <ReactFullpage.Wrapper>

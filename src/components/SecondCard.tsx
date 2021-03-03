@@ -1,10 +1,10 @@
-import { Component, CSSProperties } from "react";
-import shirtsOnHanger from "../assets/pictures/samples-6.jpg";
-import tShirts from "../assets/pictures/samples-5.jpg";
-import clothingOnHanger from "../assets/pictures/samples-3.jpg";
-import "animate.css/animate.css";
-import ContactCard from "./ContactCard";
-import TitleComponent from "./TitleComponent";
+import { Component, CSSProperties } from 'react';
+import shirtsOnHanger from '../assets/pictures/samples6.jpg';
+import tShirts from '../assets/pictures/samples5.jpg';
+import clothingOnHanger from '../assets/pictures/samples3.jpg';
+import 'animate.css/animate.css';
+import ContactCard from './ContactCard';
+import TitleComponent from './TitleComponent';
 
 interface IProps {
   activePageSection: number;
@@ -12,7 +12,6 @@ interface IProps {
 }
 
 class SecondCard extends Component<IProps> {
-
   render() {
     return (
       //   what we do
@@ -35,36 +34,38 @@ class SecondCard extends Component<IProps> {
         <div className="slide">
           <div style={{ ...flexCenter, ...flextColumn }}>
             <TitleComponent smallTitle="us at XV" title="contact" />
-          {this.props.activePageSection === 1 && this.props.activePageSlide === 1 ? (
-            <div style={flexRow}>
-              {}
-              <div>
+            {this.props.activePageSection === 1 &&
+            this.props.activePageSlide === 1 ? (
+              <div style={flexRow}>
+                {}
+                <div>
+                  <div>
+                    <ContactCard
+                      name="Evelina Ingvarsson"
+                      role="Art Director"
+                      email="evelina@xv-production.com"
+                    />
+                    <ContactCard
+                      name="Felicia Lundberg"
+                      role="Projectmanager"
+                      email="felicia@xv-production.com"
+                    />
+                  </div>
+                </div>
                 <div>
                   <ContactCard
-                    name="Evelina Ingvarsson"
-                    role="Art Director"
-                    email="evelina@xv-production.com"
+                    name="Linnéa Magnusdotter"
+                    role="Design & Styling"
+                    email="linnea@xv-production.com"
                   />
                   <ContactCard
-                    name="Felicia Lundberg"
-                    role="Projectmanager"
-                    email="felicia@xv-production.com"
+                    name="Lovisa Nolander"
+                    role="Pattern making"
+                    email="lovisa@xv-production.com"
                   />
                 </div>
               </div>
-              <div>
-                <ContactCard
-                  name="Linnéa Magnusdotter"
-                  role="Design & Styling"
-                  email="linnea@xv-production.com"
-                />
-                <ContactCard
-                  name="Lovisa Nolander"
-                  role="Pattern making"
-                  email="lovisa@xv-production.com"
-                />
-              </div>
-            </div>):null}
+            ) : null}
           </div>
         </div>
       </div>
@@ -75,33 +76,33 @@ class SecondCard extends Component<IProps> {
 export default SecondCard;
 
 const flexCenter: CSSProperties = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 };
 const flextColumn: CSSProperties = {
-  flexDirection: "column",
+  flexDirection: 'column',
 };
 const flexRow: CSSProperties = {
-  display: "flex",
-  flexDirection: "row",
+  display: 'flex',
+  flexDirection: 'row',
 };
 const imgWrapper: CSSProperties = {
-  position: "absolute",
-  top: "14%",
-  left: "2%",
-  height: "30%",
-  width: "15%",
-  backgroundColor: "transparent",
+  position: 'absolute',
+  top: '14%',
+  left: '2%',
+  height: '30%',
+  width: '15%',
+  backgroundColor: 'transparent',
   zIndex: -1,
   backgroundImage: `url(${clothingOnHanger}), url(${shirtsOnHanger}), url(${tShirts})`,
-  backgroundSize: "30%, 30%, cover",
-  backgroundPosition: "5% 90%, 95% 10%, right",
-  backgroundRepeat: "no-repeat",
+  backgroundSize: '30%, 30%, cover',
+  backgroundPosition: '5% 90%, 95% 10%, right',
+  backgroundRepeat: 'no-repeat',
 };
 
 const infoText: CSSProperties = {
-  maxWidth: "40%",
-  margin: "auto",
-  fontSize: "1.3rem",
+  maxWidth: '40%',
+  margin: 'auto',
+  fontSize: '1.3rem',
 };

@@ -2,10 +2,14 @@ import React, { CSSProperties } from 'react';
 import PresentationDiv from './PresentationDiv';
 import 'animate.css/animate.css';
 import productionImage from '../assets/production.png';
-import lovisaSewing from '../assets/pictures/lovisaSewing-2.jpg';
 import TitleComponent from './TitleComponent';
 
-import tShirts from '../assets/pictures/samples-5.jpg';
+import samples from '../assets/pictures/samples.jpg';
+import samples2 from '../assets/pictures/samples2.jpg';
+import samples3 from '../assets/pictures/samples3.jpg';
+import samples4 from '../assets/pictures/samples4.jpg';
+import samples5 from '../assets/pictures/samples5.jpg';
+import samples6 from '../assets/pictures/samples6.jpg';
 
 interface IProp {
   activePageSection: number;
@@ -15,7 +19,7 @@ interface IProp {
 class ThirdCard extends React.Component<IProp> {
   render() {
     const { activePageSection, activePageSlide } = this.props;
-    const animation = 'animate__animated animate__slideInLeft';
+    const animation = 'animate__animated animate__fadeIn';
     const animation2 =
       activePageSection === 2 && activePageSlide === 1 ? animation : '';
 
@@ -38,17 +42,18 @@ class ThirdCard extends React.Component<IProp> {
         <div className="slide">
           <div style={flexCenter}>
             <div style={imgWrapper}></div>
+            <div style={colorBox}></div>
             <p style={infoText}>
-              TURD CARD <br />
               From our studio in Kamgarn, Borås we work with everything from
-              idea to production. Our industrial machines are suitable for a
-              wide range of fabrics from silks and jersey to light-weight
-              leather and velvet. Our studio is equipped with the following:
+              idea to production.
+              <br></br>
+              <br></br>
+              Our industrial machines are suitable for a wide range of fabrics
+              from silks and jersey to light-weight leather and velvet. Our
+              studio is equipped with the following:
             </p>
           </div>
-          <div style={flexColumn}>
-            <img src={productionImage} alt="" style={productionImg} />
-          </div>
+          <div style={flexColumn}></div>
         </div>
         {/* second slide  */}
         <div className="slide">
@@ -57,36 +62,36 @@ class ThirdCard extends React.Component<IProp> {
           <div style={listWrapper} className={animation2}>
             {activePageSection === 2 && activePageSlide === 1 ? (
               <div>
-                <TitleComponent smallTitle="services" title="What we do" />
+                <TitleComponent smallTitle="services" title="we offer" />
                 <PresentationDiv
                   content={sampleMakingContent}
                   title="Sample Making"
-                  img={tShirts}
+                  img={samples}
                 />
                 <PresentationDiv
                   content={stylingContent}
                   title="Styling"
-                  img={lovisaSewing}
+                  img={samples6}
                 />
                 <PresentationDiv
                   content={mendingContent}
                   title="Mending"
-                  img={tShirts}
+                  img={samples2}
                 />
                 <PresentationDiv
                   content={packagingContent}
                   title="Packaging"
-                  img={tShirts}
+                  img={samples3}
                 />
                 <PresentationDiv
                   content={prodDevContent}
                   title="Production Development"
-                  img={tShirts}
+                  img={samples4}
                 />
                 <PresentationDiv
                   content={patternMaking}
                   title="Pattern making and grading"
-                  img={tShirts}
+                  img={samples5}
                 />{' '}
               </div>
             ) : null}
@@ -116,17 +121,19 @@ const flexColumn: CSSProperties = {
 const infoText: CSSProperties = {
   maxWidth: '30%',
   zIndex: 2,
+  color: 'white',
+  marginLeft: '30rem',
 };
 
 const imgWrapper: CSSProperties = {
   position: 'absolute',
   top: '10%',
-  right: '55%',
-  height: '70%',
-  width: '10%',
+  left: '10%',
+  height: '40rem',
+  width: '30rem',
   backgroundColor: 'white',
-  zIndex: 1,
-  backgroundImage: `url(${lovisaSewing})`,
+  zIndex: -1,
+  backgroundImage: `url(${samples})`,
   backgroundSize: 'cover',
   backgroundPosition: '80% 30%',
 };
@@ -136,6 +143,12 @@ const listWrapper: CSSProperties = {
   margin: 'auto',
 };
 
-const productionImg: CSSProperties = {
-  marginTop: '2rem',
+const colorBox: CSSProperties = {
+  position: 'absolute',
+  top: '50%',
+  left: '5%',
+  height: '20rem',
+  width: '20rem',
+  backgroundColor: '#757C79',
+  zIndex: -2,
 };

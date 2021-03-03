@@ -1,7 +1,5 @@
 import { CSSProperties } from 'react';
-import fabricSample from '../assets/pictures/samples-4.jpg';
-import studioViewSofa from '../assets/pictures/studioViewSofa.jpeg';
-
+import fabricSample from '../assets/pictures/samples4.jpg';
 
 export default function FirstCard() {
   return (

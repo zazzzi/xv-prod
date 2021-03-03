@@ -3,7 +3,7 @@ import PresentationDiv from "./PresentationDiv";
 import "animate.css/animate.css";
 import productionImage from "../assets/production.png";
 import lovisaSewing from "../assets/pictures/lovisaSewing-2.jpg";
-
+import TitleComponent from "./TitleComponent";
 class ThirdCard extends React.Component<{}> {
   // const whatToShow = "";
   // const [isShown, setIsShown] = useState(false);
@@ -38,7 +38,7 @@ class ThirdCard extends React.Component<{}> {
           </div>
           <div style={flexColumn}>
             <ul style={listStyling}>
-              <li>Cutting machine</li>
+              {/* <li>Cutting machine</li>
               <li>Straight stitch</li>
               <li>Multithread Overlock</li>
               <li>Leather machine</li>
@@ -46,29 +46,22 @@ class ThirdCard extends React.Component<{}> {
               <li>Button sewing machine keyhole (blazer)</li>
               <li>Button sewing machine (shirts, blouses) </li>
               <li>Heat transfer machine​</li>
-              <li>Press and steam</li>
+              <li>Press and steam</li> */}
             </ul>
             <img src={productionImage} alt="" style={productionImg} />
           </div>
         </div>
         {/* second slide  */}
         <div className="slide">
+          <TitleComponent smallTitle="services" title="What we do"/>
+              {/* services what we offer */}
           <div style={listWrapper}>
-            <PresentationDiv
-              content={sampleMakingContent}
-              title="Sample Making"
-            />
+            <PresentationDiv content={sampleMakingContent} title="Sample Making"/>
             <PresentationDiv content={stylingContent} title="Styling" />
             <PresentationDiv content={mendingContent} title="Mending" />
             <PresentationDiv content={packagingContent} title="Packaging" />
-            <PresentationDiv
-              content={prodDevContent}
-              title="Production Development"
-            />
-            <PresentationDiv
-              content={patternMaking}
-              title="Pattern making and grading"
-            />
+            <PresentationDiv content={prodDevContent} title="Production Development" />
+            <PresentationDiv content={patternMaking}  title="Pattern making and grading" />
           </div>
         </div>
 

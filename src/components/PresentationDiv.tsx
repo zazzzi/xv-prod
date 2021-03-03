@@ -37,29 +37,38 @@ class PresentationDiv extends Component<
       >
         <div style={contentWrapper}>
           <div style={serviceWrapper}>
+          <div style={titleWrapper}>
             <h2>{title}</h2>
 
             {this.state.isShown && (
               <p
-                style={textStyle}
-                className="animate__animated animate__fadeIn "
+              style={textStyle}
+              className="animate__animated animate__fadeIn "
               >
                 {content}
               </p>
             )}
-          </div>
+            </div>
           <img src={cross} draggable="false" alt="" style={crossStyle} />
+          </div>
         </div>
       </div>
     );
   }
 }
 
-const serviceWrapper: CSSProperties = {
+const titleWrapper: CSSProperties = {
   display: "flex",
   flexDirection: "column",
+};
+
+const serviceWrapper: CSSProperties = {
+  display: "flex",
+  flexDirection: "row",
   justifyContent: "space-between",
   width: "100%",
+
+  borderBottom: "solid .1rem "
 };
 
 const contentWrapper: CSSProperties = {
@@ -68,8 +77,9 @@ const contentWrapper: CSSProperties = {
 };
 
 const crossStyle: CSSProperties = {
-  width: "3rem",
-  height: "3rem",
+  width: "2rem",
+  height: "2rem",
+  marginTop: "1rem"
 };
 
 const textStyle: CSSProperties = {

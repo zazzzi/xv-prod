@@ -6,6 +6,7 @@ import clothingOnHanger from "../assets/pictures/samples-3.jpg";
 import "animate.css/animate.css";
 import FullpageWrapper from "./App";
 import ContactCard from "./ContactCard";
+import TitleComponent from "./TitleComponent";
 
 interface IState {
   isOnScreen: boolean;
@@ -43,31 +44,33 @@ class SecondCard extends Component<{}, IState> {
         </div>
 
         <div className="slide">
-          <h2 style={flexCenter}>Who we are</h2>
-          <div style={{ ...flexCenter }}>
-            <div>
-              <ContactCard
-                name="Evelina Ingvarsson"
-                role="Art Director"
-                email="evelina@xv-production.com"
-              />
-              <ContactCard
-                name="Felicia Lundberg"
-                role="Projectmanager"
-                email="felicia@xv-production.com"
-              />
-            </div>
-            <div>
-              <ContactCard
-                name="Linnéa Magnusdotter"
-                role="Design och Styling"
-                email="linnea@xv-production.com"
-              />
-              <ContactCard
-                name="Lovisa Nolander"
-                role="Pattern making"
-                email="lovisa@xv-production.com"
-              />
+          <div style={{ ...flexCenter,  ...flextColumn}}>
+            <TitleComponent smallTitle="us at XV" title="contact" />
+            <div style={flexRow}>
+              <div>
+                <ContactCard
+                  name="Evelina Ingvarsson"
+                  role="Art Director"
+                  email="evelina@xv-production.com"
+                />
+                <ContactCard
+                  name="Felicia Lundberg"
+                  role="Projectmanager"
+                  email="felicia@xv-production.com"
+                />
+              </div>
+              <div>
+                <ContactCard
+                  name="Linnéa Magnusdotter"
+                  role="Design och Styling"
+                  email="linnea@xv-production.com"
+                />
+                <ContactCard
+                  name="Lovisa Nolander"
+                  role="Pattern making"
+                  email="lovisa@xv-production.com"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -83,7 +86,13 @@ const flexCenter: CSSProperties = {
   justifyContent: "center",
   alignItems: "center",
 };
-
+const flextColumn: CSSProperties = {
+  flexDirection: "column",
+};
+const flexRow: CSSProperties = {
+  display: 'flex',
+  flexDirection: "row",
+};
 const imgWrapper: CSSProperties = {
   position: "absolute",
   top: "14%",

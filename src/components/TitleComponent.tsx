@@ -21,7 +21,7 @@ class TitleComponent extends Component<
     return (
       <div style={titleWrapper}>
       <h4 style={smallTitleStyle}>{smallTitle}</h4>
-      <h1 style={titleStyle}>{title}</h1>
+      <h2 style={titleStyle}>{title}</h2>
       </div>
       );
   }

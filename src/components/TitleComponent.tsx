@@ -21,10 +21,7 @@ class TitleComponent extends Component<
     const smallTitle: string = this.props.smallTitle;
     return (
       <div style={titleWrapper}>
-        <div style={smallTitleStyle}>
-          <h4>{smallTitle}</h4>
-        </div>
-
+      <h4 style={smallTitleStyle}>{smallTitle}</h4>
       <h1 style={titleStyle}>{title}</h1>
       </div>
       );
@@ -35,7 +32,7 @@ const smallTitleStyle: CSSProperties = {
   display: "flex",
   height: "100%",
   width: "50rem",
-  margin: "5rem 0 0 0",
+  paddingBottom: ".5rem",
 
   fontSize: "1rem",
   borderBottom: ".1rem solid"
@@ -50,9 +47,9 @@ const titleStyle: CSSProperties = {
 
 const titleWrapper: CSSProperties = {
   display: "flex",
-  justifyContent: "center",
+  alignItems: "center",
   flexDirection: "column",
-  margin: "0 5rem"
+  margin: "0 20rem"
 }
 
 export default TitleComponent;

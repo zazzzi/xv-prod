@@ -52,14 +52,12 @@ class ThirdCard extends React.Component<IProp> {
         </div>
         {/* second slide  */}
         <div className="slide">
-          
-          <TitleComponent smallTitle="services" title="What we do" />
-
           {/* services what we offer */}
 
           <div style={listWrapper} className={animation2}>
             {activePageSection === 2 && activePageSlide === 1 ? (
               <div>
+                <TitleComponent smallTitle="services" title="What we do" />
                 <PresentationDiv
                   content={sampleMakingContent}
                   title="Sample Making"
@@ -94,7 +92,6 @@ class ThirdCard extends React.Component<IProp> {
             ) : null}
           </div>
         </div>
-
       </div>
     );
   }

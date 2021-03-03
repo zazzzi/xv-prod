@@ -1,11 +1,12 @@
 import { CSSProperties } from 'react';
 import fabricSample from '../assets/pictures/samples4.jpg';
+import 'animate.css/animate.css';
 
 export default function FirstCard() {
   return (
     <div className="section">
       <div style={flexCenter}>
-        <p style={infoText}>
+        <p style={infoText} className="animate__animated animate__fadeIn">
           XV Production was born out of XV Atelier in 2018.
           <br></br>
           The goal was to offer local design- and production services for other

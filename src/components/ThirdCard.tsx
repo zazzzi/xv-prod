@@ -1,6 +1,8 @@
 import React, { CSSProperties } from "react";
 import PresentationDiv from "./PresentationDiv";
 import "animate.css/animate.css";
+import productionImage from "../assets/production.png";
+import lovisaSewing from "../assets/pictures/lovisaSewing-2.jpg";
 
 class ThirdCard extends React.Component<{}> {
   // const whatToShow = "";
@@ -31,8 +33,22 @@ class ThirdCard extends React.Component<{}> {
               From our studio in Kamgarn, Borås we work with everything from
               idea to production. Our industrial machines are suitable for a
               wide range of fabrics from silks and jersey to light-weight
-              leather and velvet.
+              leather and velvet. Our studio is equipped with the following:
             </p>
+          </div>
+          <div style={flexColumn}>
+            <ul style={listStyling}>
+              <li>Cutting machine</li>
+              <li>Straight stitch</li>
+              <li>Multithread Overlock</li>
+              <li>Leather machine</li>
+              <li>Seam covering machine</li>
+              <li>Button sewing machine keyhole (blazer)</li>
+              <li>Button sewing machine (shirts, blouses) </li>
+              <li>Heat transfer machine​</li>
+              <li>Press and steam</li>
+            </ul>
+            <img src={productionImage} alt="" style={productionImg} />
           </div>
         </div>
         {/* second slide  */}
@@ -72,21 +88,42 @@ const flexCenter: CSSProperties = {
   alignItems: "center",
 };
 
+const flexColumn: CSSProperties = {
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  margin: "auto",
+  display: "flex",
+};
+
 const infoText: CSSProperties = {
   maxWidth: "30%",
+  zIndex: 2,
 };
 
 const imgWrapper: CSSProperties = {
   position: "absolute",
-  top: "40%",
-  right: "60%",
-  height: "30rem",
-  width: "20rem",
+  top: "10%",
+  right: "55%",
+  height: "70%",
+  width: "10%",
   backgroundColor: "white",
-  zIndex: -1,
+  zIndex: 1,
+  backgroundImage: `url(${lovisaSewing})`,
+  backgroundSize: "cover",
+  backgroundPosition: "80% 30%",
 };
 
 const listWrapper: CSSProperties = {
   width: "50rem",
   margin: "auto",
+};
+
+const productionImg: CSSProperties = {
+  marginTop: "2rem",
+};
+
+const listStyling: CSSProperties = {
+  lineHeight: "1.5rem",
+  zIndex: 2,
 };

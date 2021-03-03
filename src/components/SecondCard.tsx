@@ -1,21 +1,16 @@
 import { Component, CSSProperties } from "react";
-import ReactFullpage from "@fullpage/react-fullpage";
 import shirtsOnHanger from "../assets/pictures/samples-6.jpg";
 import tShirts from "../assets/pictures/samples-5.jpg";
 import clothingOnHanger from "../assets/pictures/samples-3.jpg";
 import "animate.css/animate.css";
-import FullpageWrapper from "./App";
+import ContactCard from "./ContactCard";
+import TitleComponent from "./TitleComponent";
 
-interface IState {
-  isOnScreen: boolean;
-}
 
-class SecondCard extends Component<{}, IState> {
+
+class SecondCard extends Component {
   constructor(props: any) {
     super(props);
-    this.state = {
-      isOnScreen: false,
-    };
   }
 
   render() {
@@ -33,58 +28,47 @@ class SecondCard extends Component<{}, IState> {
               in our ability to meet our customers wherever they might be their
               process.
             </p>
-            <div
-              id="animationDiv"
-              style={imgWrapper}
-              className={"animate__animated animate__fadeInTopLeft"}
-            ></div>
+
           </div>
+          <div
+            style={imgWrapper}
+            className={"animate__animated animate__fadeInTopLeft"}
+          ></div>
+
+          </div>
+
         </div>
 
         <div className="slide">
-          <h2 style={flexCenter}>Who we are</h2>
-          <div style={{ ...flexCenter }}>
-            <div style={{ ...flexCenter, ...flexColumn }}>
-              <div
-                style={cardStyling}
-                className="animate__animated animate__bounce"
-              >
-                <h4>Evelina Ingvarsson</h4>
-                <p>
-                  <i>Art Director</i>
-                </p>
-                <a href="mailto:evelina@xv-production.com">
-                  evelina@xv-production.com
-                </a>
-              </div>
-              <div style={cardStyling}>
-                <h4>Felicia Lundberg </h4>
-                <p>
-                  <i>Projectmanager</i>
-                </p>
-                <a href="mailto:felicia@xv-production.com">
-                  felicia@xv-production.com
-                </a>
+          <div style={{ ...flexCenter, ...flextColumn }}>
+            <TitleComponent smallTitle="us at XV" title="contact" />
+            <div style={flexRow}>
+              <div>
+              <div>
+                <ContactCard
+                  name="Evelina Ingvarsson"
+                  role="Art Director"
+                  email="evelina@xv-production.com"
+                />
+                <ContactCard
+                  name="Felicia Lundberg"
+                  role="Projectmanager"
+                  email="felicia@xv-production.com"
+                />
               </div>
             </div>
-            <div style={{ ...flexCenter, ...flexColumn }}>
-              <div style={cardStyling}>
-                <h4>Linnéa Magnusdotter</h4>
-                <p>
-                  <i>Design & Styling</i>
-                </p>
-                <a href="mailto: linnea@xv-production.com">
-                  linnea@xv-production.com
-                </a>
-              </div>
-              <div style={cardStyling}>
-                <h4>Lovisa Nolander</h4>
-                <p>
-                  <i>Pattern making</i>
-                </p>
-                <a href="mailto:lovisa@xv-production.com ">
-                  lovisa@xv-production.com{" "}
-                </a>
+            <div>
+              <ContactCard
+                name="Linnéa Magnusdotter"
+                role="Design och Styling"
+                email="linnea@xv-production.com"
+              />
+              <ContactCard
+                name="Lovisa Nolander"
+                role="Pattern making"
+                email="lovisa@xv-production.com"
+              />
+
               </div>
             </div>
           </div>
@@ -101,11 +85,13 @@ const flexCenter: CSSProperties = {
   justifyContent: "center",
   alignItems: "center",
 };
-
-const flexColumn: CSSProperties = {
+const flextColumn: CSSProperties = {
   flexDirection: "column",
 };
-
+const flexRow: CSSProperties = {
+  display: "flex",
+  flexDirection: "row",
+};
 const imgWrapper: CSSProperties = {
   position: "absolute",
   top: "14%",
@@ -120,13 +106,6 @@ const imgWrapper: CSSProperties = {
   backgroundRepeat: "no-repeat",
 };
 
-const cardStyling: CSSProperties = {
-  margin: "1rem",
-  border: "2px solid",
-  borderRadius: "15px",
-  borderColor: "grey",
-  padding: "1rem",
-};
 const infoText: CSSProperties = {
   maxWidth: "40%",
   margin: "auto",

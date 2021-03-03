@@ -5,18 +5,29 @@ import SecondCard from "./SecondCard";
 import ThirdCard from "./ThirdCard";
 import FourthCard from "./FourthCard";
 
-export default class PageElement extends React.Component {
-  onLeave(origin: any, destination: any, direction: any) {
-    // console.log({origin});
-    const index = origin.index;
-    console.log(index);
+
+interface State {
+  activePageSection: number;
+  activePageSlide: number;
+}
+
+export default class PageElement extends React.Component<{}, State> {
+  state: State = {
+    activePageSection: 0,
+    activePageSlide: 0
   }
 
-  afterLoad(origin: any, destination: any, direction: any) {
-    console.log("After load: " + destination.index);
+  onLeave = (origin: any, destination: any, direction: any) => {
+    this.setState({
+      activePageSection: destination.index
+    })
   }
-  afterSlideLoad(section: any, origin: any, destination: any, direction: any) {
-    console.log("lol");
+
+  afterSlideLoad = (section: any, origin: any, destination: any, direction: any) => {
+    this.setState({
+      activePageSlide: destination.index
+    })
+
   }
 
   render() {
@@ -25,8 +36,8 @@ export default class PageElement extends React.Component {
         licenseKey={"OPEN-SOURCE-GPLV3-LICENSE"}
         // v2compatible={true}
         fullpage_api
-        onLeave={this.onLeave.bind(this)}
-        afterLoad={this.afterLoad.bind(this)}
+        onLeave={this.onLeave} //vertical
+        afterSlideLoad={this.afterSlideLoad} //horizontal
         navigation
         loopHorizontal={false}
         dragAndMove={true}
@@ -34,12 +45,12 @@ export default class PageElement extends React.Component {
         navigationTooltips={["", "what we do", "project", "what we offer"]}
         anchors={["xv-production", "what-we-do", "project", "what-we-offer"]}
         scrollingSpeed={1000} /* Options here */
-        render={({ state, fullpageApi }: any) => {
+        render={({}: any) => {
           return (
             <ReactFullpage.Wrapper>
               <FirstCard />
               <SecondCard />
-              <ThirdCard />
+              <ThirdCard {...this.state} />
               <FourthCard />
             </ReactFullpage.Wrapper>
           );

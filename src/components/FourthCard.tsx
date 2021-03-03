@@ -1,5 +1,4 @@
 import { CSSProperties } from "react";
-import ThirdCard from "./ThirdCard";
 import fabricSample from "../assets/pictures/samples-4.jpg";
 
 export default function FirstCard() {

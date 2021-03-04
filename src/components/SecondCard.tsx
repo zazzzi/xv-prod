@@ -17,11 +17,14 @@ class SecondCard extends Component<IProps> {
       //   what we do
       <div className="section">
         <div className="slide">
+        <div style={rootResposive}>
+
+
           <div style={{ ...flexCenter, ...infoText }}>
             <p>
               <b>XV Production</b> is a creative studio that collaborates with
               fashion- and textile brands in a variety of projects.<br></br>
-              <br></br> As a creative studio, we work with all phases of the
+             As a creative studio, we work with all phases of the
               production process - everything from the inception and initial
               idea, to the design and the finished products.
               <br></br> <br></br> Our strength lies in our ability to meet our
@@ -31,6 +34,9 @@ class SecondCard extends Component<IProps> {
           <div style={imgFilter}></div>
           <div style={imgWrapper}></div>
           <div style={colorBox}></div>
+
+
+        </div>
         </div>
 
         <div className="slide">
@@ -97,10 +103,10 @@ const flexRow: CSSProperties = {
 
 const imgWrapper: CSSProperties = {
   position: "absolute",
-  top: "30%",
+  top: "20%",
   left: "10%",
-  height: "30rem",
-  width: "20rem",
+  height: "38rem",
+  width: "27rem",
   zIndex: -2,
   backgroundImage: `url(${clothingOnHanger})`,
   backgroundSize: "cover",
@@ -110,10 +116,10 @@ const imgWrapper: CSSProperties = {
 
 const imgFilter: CSSProperties = {
   position: "absolute",
-  top: "30%",
+  top: "20%",
   left: "10%",
-  height: "30rem",
-  width: "20rem",
+  height: "38rem",
+  width: "27rem",
   backgroundColor: "#ADACA2",
   zIndex: -1,
   opacity: "30%",
@@ -121,8 +127,8 @@ const imgFilter: CSSProperties = {
 
 const colorBox: CSSProperties = {
   position: "absolute",
-  top: "40%",
-  left: "15%",
+  top: "80%",
+  left: "28%",
   height: "25rem",
   width: "23rem",
   backgroundColor: "#494C50",
@@ -130,8 +136,17 @@ const colorBox: CSSProperties = {
 };
 
 const infoText: CSSProperties = {
-  maxWidth: "40rem",
-  marginLeft: "30rem",
-  marginBottom: "30rem",
+  width: "40rem",
   color: "white",
+  marginLeft:'20rem',
+  marginTop: '10rem'
 };
+
+const rootResposive: CSSProperties = {
+  width: '60%',
+  maxWidth: '40rem',
+  maxHeight: '40rem',
+  position: 'absolute',
+  top: '12vh',
+  left: '22vw'
+}

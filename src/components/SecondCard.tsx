@@ -1,10 +1,10 @@
-import { Component, CSSProperties } from 'react';
-import shirtsOnHanger from '../assets/pictures/samples6.jpg';
-import tShirts from '../assets/pictures/samples5.jpg';
-import clothingOnHanger from '../assets/pictures/samples3.jpg';
-import 'animate.css/animate.css';
-import ContactCard from './ContactCard';
-import TitleComponent from './TitleComponent';
+import { Component, CSSProperties } from "react";
+import shirtsOnHanger from "../assets/pictures/samples6.jpg";
+import tShirts from "../assets/pictures/samples5.jpg";
+import clothingOnHanger from "../assets/pictures/samples3.jpg";
+import "animate.css/animate.css";
+import ContactCard from "./ContactCard";
+import TitleComponent from "./TitleComponent";
 
 interface IProps {
   activePageSection: number;
@@ -35,13 +35,18 @@ class SecondCard extends Component<IProps> {
 
         <div className="slide">
           <div style={{ ...flexCenter, ...flextColumn }}>
-            <TitleComponent smallTitle="us at XV" title="contact" />
+            {this.props.activePageSection === 1 &&
+            this.props.activePageSlide === 1 ? (
+              <div className="animate__animated animate__fadeIn">
+                <TitleComponent smallTitle="us at XV" title="contact" />
+              </div>
+            ) : null}
+
             {this.props.activePageSection === 1 &&
             this.props.activePageSlide === 1 ? (
               <div style={flexRow}>
-                {}
                 <div>
-                  <div>
+                  <div className="animate__animated animate__fadeIn">
                     <ContactCard
                       name="Evelina Ingvarsson"
                       role="Art Director"
@@ -54,7 +59,7 @@ class SecondCard extends Component<IProps> {
                     />
                   </div>
                 </div>
-                <div>
+                <div className="animate__animated animate__fadeIn">
                   <ContactCard
                     name="Linnéa Magnusdotter"
                     role="Design & Styling"
@@ -78,16 +83,16 @@ class SecondCard extends Component<IProps> {
 export default SecondCard;
 
 const flexCenter: CSSProperties = {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
 };
 const flextColumn: CSSProperties = {
-  flexDirection: 'column',
+  flexDirection: "column",
 };
 const flexRow: CSSProperties = {
-  display: 'flex',
-  flexDirection: 'row',
+  display: "flex",
+  flexDirection: "row",
 };
 
 const imgWrapper: CSSProperties = {
@@ -129,4 +134,3 @@ const infoText: CSSProperties = {
   marginLeft: '30rem',
   marginBottom: '30rem',
   color: 'white',
-};

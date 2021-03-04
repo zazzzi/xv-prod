@@ -34,6 +34,4 @@ p {
   animation: cursorAnim2 0.5s infinite alternate;
 }
 
-.bigOnHover:hover {
-  transform: scale(1.1);
-}
+

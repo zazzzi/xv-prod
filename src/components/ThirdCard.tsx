@@ -42,6 +42,7 @@ class ThirdCard extends React.Component<IProp> {
       <div className="section">
         <div className="slide">
           <div style={flexCenter}>
+            <div style={imgFilter}></div>
             <div style={imgWrapper}></div>
             <div style={colorBox}></div>
             <p style={infoText}>
@@ -152,4 +153,15 @@ const colorBox: CSSProperties = {
   width: '20rem',
   backgroundColor: '#757C79',
   zIndex: -2,
+};
+
+const imgFilter: CSSProperties = {
+  position: 'absolute',
+  top: '10%',
+  left: '10%',
+  height: '40rem',
+  width: '30rem',
+  backgroundColor: '#E5E5E5',
+  opacity: '20%',
+  zIndex: 3,
 };

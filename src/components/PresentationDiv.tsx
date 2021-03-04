@@ -1,6 +1,6 @@
-import { Component, CSSProperties } from "react";
-import cross from "../assets/cross.png";
-import "animate.css/animate.css";
+import { Component, CSSProperties } from 'react';
+import cross from '../assets/cross.png';
+import 'animate.css/animate.css';
 
 interface IState {
   isShown: boolean;
@@ -67,39 +67,39 @@ class PresentationDiv extends Component<IProps, IState> {
 }
 
 const hoverImg: CSSProperties = {
-  position: "absolute",
-  width: "7rem",
-  right: "7rem",
+  position: 'absolute',
+  width: '7rem',
+  right: '20rem',
 };
 
 const titleWrapper: CSSProperties = {
-  display: "flex",
-  flexDirection: "column",
+  display: 'flex',
+  flexDirection: 'column',
 };
 
 const serviceWrapper: CSSProperties = {
-  display: "flex",
-  flexDirection: "row",
-  justifyContent: "space-between",
-  width: "100%",
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  width: '100%',
 
-  borderBottom: "solid .1rem ",
+  borderBottom: 'solid .1rem ',
 };
 
 const contentWrapper: CSSProperties = {
-  display: "flex",
-  justifyContent: "center",
+  display: 'flex',
+  justifyContent: 'center',
 };
 
 const crossStyle: CSSProperties = {
-  width: "2rem",
-  height: "2rem",
-  marginTop: "1rem",
+  width: '2rem',
+  height: '2rem',
+  marginTop: '1rem',
 };
 
 const textStyle: CSSProperties = {
-  marginTop: "-1rem",
-  overflow: "hidden",
+  marginTop: '-1rem',
+  overflow: 'hidden',
 };
 
 export default PresentationDiv;

@@ -96,41 +96,42 @@ const flexRow: CSSProperties = {
 };
 
 const imgWrapper: CSSProperties = {
-  position: 'absolute',
-  top: '30%',
-  left: '10%',
-  height: '30rem',
-  width: '20rem',
+  position: "absolute",
+  top: "30%",
+  left: "10%",
+  height: "30rem",
+  width: "20rem",
   zIndex: -2,
   backgroundImage: `url(${clothingOnHanger})`,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat',
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
 };
 
 const imgFilter: CSSProperties = {
-  position: 'absolute',
-  top: '30%',
-  left: '10%',
-  height: '30rem',
-  width: '20rem',
-  backgroundColor: '#ADACA2',
+  position: "absolute",
+  top: "30%",
+  left: "10%",
+  height: "30rem",
+  width: "20rem",
+  backgroundColor: "#ADACA2",
   zIndex: -1,
-  opacity: '30%',
+  opacity: "30%",
 };
 
 const colorBox: CSSProperties = {
-  position: 'absolute',
-  top: '40%',
-  left: '15%',
-  height: '25rem',
-  width: '23rem',
-  backgroundColor: '#494C50',
+  position: "absolute",
+  top: "40%",
+  left: "15%",
+  height: "25rem",
+  width: "23rem",
+  backgroundColor: "#494C50",
   zIndex: -3,
 };
 
 const infoText: CSSProperties = {
-  maxWidth: '40rem',
-  marginLeft: '30rem',
-  marginBottom: '30rem',
-  color: 'white',
+  maxWidth: "40rem",
+  marginLeft: "30rem",
+  marginBottom: "30rem",
+  color: "white",
+};

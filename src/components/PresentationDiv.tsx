@@ -47,7 +47,7 @@ class PresentationDiv extends Component<IProps, IState> {
 
           <div style={serviceWrapper}>
             <div style={titleWrapper}>
-              <h2>{title}</h2>
+              <h2 style={smallTitle}>{title}</h2>
 
               {this.state.isShown && (
                 <p
@@ -65,6 +65,11 @@ class PresentationDiv extends Component<IProps, IState> {
     );
   }
 }
+
+const smallTitle: CSSProperties = {
+  fontSize: "1rem",
+  lineHeightStep: "1rem",
+};
 
 const hoverImg: CSSProperties = {
   position: "absolute",
@@ -94,12 +99,14 @@ const contentWrapper: CSSProperties = {
 const crossStyle: CSSProperties = {
   width: "2rem",
   height: "2rem",
-  marginTop: "1rem",
+  marginTop: ".5rem",
 };
 
 const textStyle: CSSProperties = {
-  marginTop: "-1rem",
+  marginTop: "-.5rem",
   overflow: "hidden",
+  fontSize: ".7rem",
+  letterSpacing: "1px",
 };
 
 export default PresentationDiv;

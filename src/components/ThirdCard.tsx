@@ -129,8 +129,8 @@ const infoText: CSSProperties = {
 
 const imgWrapper: CSSProperties = {
   position: "absolute",
-  top: "10%",
-  left: "13%",
+  top: "6rem",
+  left: "31rem",
   height: "40rem",
   width: "30rem",
   backgroundColor: "white",
@@ -147,8 +147,8 @@ const listWrapper: CSSProperties = {
 
 const colorBox: CSSProperties = {
   position: "absolute",
-  top: "40%",
-  left: "10%",
+  top: "28rem",
+  left: "25rem",
   height: "20rem",
   width: "20rem",
   backgroundColor: "#757C79",
@@ -157,8 +157,8 @@ const colorBox: CSSProperties = {
 
 const imgFilter: CSSProperties = {
   position: "absolute",
-  top: "10%",
-  left: "13%",
+  top: "6rem",
+  left: "31rem",
   height: "40rem",
   width: "30rem",
   backgroundColor: "#E5E5E5",

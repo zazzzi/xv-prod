@@ -42,18 +42,20 @@ class ThirdCard extends React.Component<IProp> {
       <div className="section">
         <div className="slide">
           <div style={flexCenter}>
-            <div style={imgFilter}></div>
-            <div style={imgWrapper}></div>
-            <div style={colorBox}></div>
-            <p style={infoText}>
-              From our studio in Kamgarn, Borås we work with everything from
-              idea to production.
-              <br></br>
-              <br></br>
-              Our industrial machines are suitable for a wide range of fabrics
-              from silks and jersey to light-weight leather and velvet. Our
-              studio is equipped with the following:
-            </p>
+            <div style={wrapper}>
+              <div style={imgFilter}></div>
+              <div style={imgWrapper}></div>
+              <div style={colorBox}></div>
+              <p style={infoText}>
+                From our studio in Kamgarn, Borås we work with everything from
+                idea to production.
+                <br></br>
+                <br></br>
+                Our industrial machines are suitable for a wide range of fabrics
+                from silks and jersey to light-weight leather and velvet. Our
+                studio is equipped with the following:
+              </p>
+            </div>
           </div>
           <div style={flexColumn}></div>
         </div>
@@ -106,6 +108,13 @@ class ThirdCard extends React.Component<IProp> {
 
 export default ThirdCard;
 
+const wrapper: CSSProperties = {
+  width: "60%",
+  position: "absolute",
+  top: "5vh",
+  left: "5vw",
+};
+
 const flexCenter: CSSProperties = {
   display: "flex",
   justifyContent: "center",
@@ -121,10 +130,12 @@ const flexColumn: CSSProperties = {
 };
 
 const infoText: CSSProperties = {
-  maxWidth: "30%",
+  position: "absolute",
+  maxWidth: "20%",
   zIndex: 2,
   color: "white",
-  marginLeft: "30rem",
+  marginLeft: "60rem",
+  marginTop: "30rem",
 };
 
 const imgWrapper: CSSProperties = {

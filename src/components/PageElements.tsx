@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactFullpage from '@fullpage/react-fullpage';
-import FirstCard from './FirstCard';
-import SecondCard from './SecondCard';
-import ThirdCard from './ThirdCard';
-import FourthCard from './FourthCard';
+import React from "react";
+import ReactFullpage from "@fullpage/react-fullpage";
+import FirstCard from "./FirstCard";
+import SecondCard from "./SecondCard";
+import ThirdCard from "./ThirdCard";
+import FourthCard from "./FourthCard";
 
 interface State {
   activePageSection: number;
@@ -36,7 +36,7 @@ export default class PageElement extends React.Component<{}, State> {
   render() {
     return (
       <ReactFullpage
-        licenseKey={'OPEN-SOURCE-GPLV3-LICENSE'}
+        licenseKey={"OPEN-SOURCE-GPLV3-LICENSE"}
         // v2compatible={true}
         fullpage_api
         onLeave={this.onLeave} //vertical
@@ -46,10 +46,10 @@ export default class PageElement extends React.Component<{}, State> {
         dragAndMove={true}
         slidesNavigation={true}
         resetSliders={true}
+        responsiveWidth={700}
         navigationTooltips={["", "what we do", "project", "what we offer"]}
         anchors={["xv-production", "what-we-do", "project", "what-we-offer"]}
         scrollingSpeed={800} /* Options here */
-
         render={({}: any) => {
           return (
             <ReactFullpage.Wrapper>

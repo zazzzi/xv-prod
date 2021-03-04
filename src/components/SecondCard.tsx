@@ -23,12 +23,14 @@ class SecondCard extends Component<IProps> {
               fashion- and textile brands in a variety of projects.<br></br>
               <br></br> As a creative studio, we work with all phases of the
               production process - everything from the inception and initial
-              idea, to the design and the finished products. Our strength lies
-              in our ability to meet our customers wherever they might be their
-              process.
+              idea, to the design and the finished products.
+              <br></br> <br></br> Our strength lies in our ability to meet our
+              customers wherever they might be their process.
             </p>
           </div>
+          <div style={imgFilter}></div>
           <div style={imgWrapper}></div>
+          <div style={colorBox}></div>
         </div>
 
         <div className="slide">
@@ -87,22 +89,44 @@ const flexRow: CSSProperties = {
   display: 'flex',
   flexDirection: 'row',
 };
+
 const imgWrapper: CSSProperties = {
   position: 'absolute',
-  top: '14%',
-  left: '2%',
-  height: '30%',
-  width: '15%',
-  backgroundColor: 'transparent',
-  zIndex: -1,
-  backgroundImage: `url(${clothingOnHanger}), url(${shirtsOnHanger}), url(${tShirts})`,
-  backgroundSize: '30%, 30%, cover',
-  backgroundPosition: '5% 90%, 95% 10%, right',
+  top: '30%',
+  left: '10%',
+  height: '30rem',
+  width: '20rem',
+  zIndex: -2,
+  backgroundImage: `url(${clothingOnHanger})`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
 };
 
+const imgFilter: CSSProperties = {
+  position: 'absolute',
+  top: '30%',
+  left: '10%',
+  height: '30rem',
+  width: '20rem',
+  backgroundColor: '#ADACA2',
+  zIndex: -1,
+  opacity: '30%',
+};
+
+const colorBox: CSSProperties = {
+  position: 'absolute',
+  top: '40%',
+  left: '15%',
+  height: '25rem',
+  width: '23rem',
+  backgroundColor: '#494C50',
+  zIndex: -3,
+};
+
 const infoText: CSSProperties = {
-  maxWidth: '40%',
-  margin: 'auto',
-  fontSize: '1.3rem',
+  maxWidth: '40rem',
+  marginLeft: '30rem',
+  marginBottom: '30rem',
+  color: 'white',
 };

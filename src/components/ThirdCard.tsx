@@ -3,7 +3,6 @@ import PresentationDiv from "./PresentationDiv";
 import "animate.css/animate.css";
 import productionImage from "../assets/production.png";
 import TitleComponent from "./TitleComponent";
-import "../mobile.css";
 
 import samples from "../assets/pictures/samples.jpg";
 import samples2 from "../assets/pictures/samples2.jpg";
